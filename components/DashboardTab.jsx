@@ -307,6 +307,7 @@ function ChartSection({ title, children, mt=16 }){
 
 export default function DashboardTab(props){
   const { className, style, ...rest } = props ?? {};
+  const { className, style, ...rest } = props ?? {};
 
   const [ids, setIds] = useState([]);
   const [forecastId, setForecastId] = useState("");

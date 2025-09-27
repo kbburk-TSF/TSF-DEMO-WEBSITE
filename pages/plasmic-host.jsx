@@ -6,7 +6,7 @@ import DashboardTab from '../components/DashboardTab';
 import DashboardTab2 from '../components/DashboardTab2';
 
 registerComponent(DashboardTab, {
-  name: 'DashboardTab',
+  name: 'DashboardTab2',
   importPath: '../components/DashboardTab',
   importName: 'default',
   props: {}
