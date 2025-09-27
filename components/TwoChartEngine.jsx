@@ -1,7 +1,8 @@
-// src/components/TwoChartEngine.jsx
-// NOTE: This component is derived 1:1 from the provided DashboardTab2.jsx.
-// Only change: the exported component name is now "TwoChartEngine".
-// Nothing else in the file has been altered (layout, styles, logic).
+// src/tabs/DashboardTab2.jsx
+// Derived from DashboardTab.jsx (2025-09-27):
+// - Shows only Chart 1 (Classical) and Chart 3 (Gold Line & Green Zone).
+// - Uses the exact same configurations, sizing, legends, and shared Y-axis domain logic.
+// - Historical actuals on all charts; bottom legend excludes High/Low items.
 
 import React, { useEffect, useMemo, useState, useRef, useLayoutEffect } from "react";
 import { listForecastIds, queryView } from "../api.js";

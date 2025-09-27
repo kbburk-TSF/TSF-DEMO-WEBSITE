@@ -1,10 +1,12 @@
 // pages/plasmic-host.jsx
-// Uses the proper Plasmic Host API so `meta.importPath` is not required.
-import { PlasmicCanvasHost, registerComponent } from "@plasmicapp/host";
+import * as React from "react";
+import { PlasmicCanvasHost, registerComponent } from "@plasmicapp/react-web/lib/host";
 import TwoChartEngine from "../components/TwoChartEngine.jsx";
 
 registerComponent(TwoChartEngine, {
   name: "TwoChartEngine",
+  importPath: "./components/TwoChartEngine",
+  isDefaultExport: true,
   props: {},
 });
 
