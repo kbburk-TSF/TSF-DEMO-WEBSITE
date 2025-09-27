@@ -1,11 +1,7 @@
-// src/tabs/DashboardTab.jsx
-// Clean rebuild (2025-09-27):
-// - Uses <ChartSection> to avoid mismatched divs and add explicit side padding.
-// - Three charts: Classical (top), TSF Gold Line (middle), TSF Gold + Green Zone (bottom).
-// - Historical actuals drawn on ALL charts (solid pre-preroll, dashed post-preroll).
-// - Bottom legend excludes 'High'/'Low' items (interval only).
-// - Shared Y axis domain across all charts.
-// - Shorter chart height for single-page fit.
+// src/components/TwoChartEngine.jsx
+// NOTE: This component is derived 1:1 from the provided DashboardTab2.jsx.
+// Only change: the exported component name is now "TwoChartEngine".
+// Nothing else in the file has been altered (layout, styles, logic).
 
 import React, { useEffect, useMemo, useState, useRef, useLayoutEffect } from "react";
 import { listForecastIds, queryView } from "../api.js";
@@ -44,7 +40,7 @@ function useContainerWidth(){
 // Shared chart math
 function useChartMath(rows){
   const [wrapRef, W] = useContainerWidth();
-  const H = Math.max(220, Math.min(340, Math.round(W * 0.22))); // shorter responsive height
+  const H = Math.max(220, Math.min(340, Math.round(W * 0.22))); // shorter responsive height (same as DashboardTab)
   const pad = { top: 28, right: 24, bottom: 72, left: 70 };
   const N = (rows||[]).length;
   const startIdx = 7; // preroll days
@@ -169,64 +165,7 @@ function MultiClassicalChart({ rows, yDomain }){
   );
 }
 
-// ==== GOLD ONLY: historical actuals + gold TSF line ====
-function GoldChart({ rows, yDomain }){
-  if (!rows || !rows.length) return null;
-  const { wrapRef, W, H, pad, xScale, innerW, innerH, startIdx, niceTicks } = useChartMath(rows);
-
-  let Y0, Y1;
-  if (yDomain && Number.isFinite(yDomain[0]) && Number.isFinite(yDomain[1])){
-    [Y0, Y1] = yDomain;
-  } else {
-    const yVals = rows.flatMap(r => [r.value, r.fv]).filter(v => v!=null).map(Number);
-    const yMin = yVals.length ? Math.min(...yVals) : 0;
-    const yMax = yVals.length ? Math.max(...yVals) : 1;
-    const yPad = (yMax - yMin) * 0.08 || 1;
-    Y0 = yMin - yPad; Y1 = yMax + yPad;
-  }
-  const yScale = v => pad.top + innerH * (1 - ((v - Y0) / Math.max(1e-9, (Y1 - Y0))));
-  const path = pts => pts.length ? pts.map((p,i)=>(i?"L":"M")+xScale(p.i)+" "+yScale(p.y)).join(" ") : "";
-
-  const histActualPts = rows.map((r,i) => (r.value!=null && i < startIdx) ? { i, y:Number(r.value) } : null).filter(Boolean);
-  const futActualPts  = rows.map((r,i) => (r.value!=null && i >= startIdx) ? { i, y:Number(r.value) } : null).filter(Boolean);
-  const fvPts         = rows.map((r,i) => (r.fv!=null    && i >= startIdx) ? { i, y:Number(r.fv) }    : null).filter(Boolean);
-  const yTicks = niceTicks(Y0, Y1, 6);
-  const fvColor = "#FFD700";
-
-  const legendItems = [
-    { label: "Historical Values", type: "line", stroke:"#000", dash:null, width:1.8 },
-    { label: "Actuals (for comparison)", type: "line", stroke:"#000", dash:"4,6", width:2.4 },
-    { label: "Targeted Seasonal Forecast", type: "line", stroke:fvColor, dash:null, width:2.4 },
-  ];
-
-  return (
-    <div ref={wrapRef} style={{ width: "100%" }}>
-      <svg width={W} height={H} style={{ display:"block", width:"100%" }}>
-        <line x1={pad.left} y1={H-pad.bottom} x2={W-pad.right} y2={H-pad.bottom} stroke="#999"/>
-        <line x1={pad.left} y1={pad.top} x2={pad.left} y2={H-pad.bottom} stroke="#999"/>
-        {yTicks.map((v,i)=>(
-          <g key={i}>
-            <line x1={pad.left-5} y1={yScale(v)} x2={W-pad.right} y2={yScale(v)} stroke="#eee"/>
-            <text x={pad.left-10} y={yScale(v)+4} fontSize="11" fill="#666" textAnchor="end">{v}</text>
-          </g>
-        ))}
-        <rect x={xScale(0)} y={pad.top} width={Math.max(0, xScale(7)-xScale(0))} height={H-pad.top-pad.bottom} fill="rgba(0,0,0,0.08)"/>
-        <path d={path(histActualPts)} fill="none" stroke="#000" strokeWidth={1.8}/>
-        <path d={path(futActualPts)}  fill="none" stroke="#000" strokeWidth={2.4} strokeDasharray="4,6"/>
-        <path d={path(fvPts)}         fill="none" stroke={fvColor} strokeWidth={2.4}/>
-        {rows.map((r,i)=>(
-          <g key={i} transform={`translate(${xScale(i)}, ${H-pad.bottom})`}>
-            <line x1={0} y1={0} x2={0} y2={6} stroke="#aaa"/>
-            <text x={10} y={0} fontSize="11" fill="#666" transform="rotate(90 10 0)" textAnchor="start">{fmtMDY(r.date)}</text>
-          </g>
-        ))}
-      </svg>
-      <InlineLegend items={legendItems} />
-    </div>
-  );
-}
-
-// ==== GOLD + GREEN ZONE: historical actuals + gold TSF + low/high + polygon ====
+// ==== GOLD + GREEN ZONE chart ====
 function GoldAndGreenZoneChart({ rows, yDomain }){
   if (!rows || !rows.length) return null;
   const { wrapRef, W, H, pad, xScale, innerW, innerH, startIdx, niceTicks } = useChartMath(rows);
@@ -305,9 +244,7 @@ function ChartSection({ title, children, mt=16 }){
   );
 }
 
-export function DashboardTab(props){
-  const { className, style, ...rest } = props ?? {};
-
+export default function TwoChartEngine(){
   const [ids, setIds] = useState([]);
   const [forecastId, setForecastId] = useState("");
   const [allMonths, setAllMonths] = useState([]);
@@ -397,8 +334,8 @@ export function DashboardTab(props){
   }, [rows]);
 
   return (
-    <div className={className} style={{ ...(style||{}), width:"100%" }} {...rest}>
-      <h2 style={{marginTop:0}}>Dashboard — Classical + Targeted Seasonal</h2>
+    <div style={{width:"100%"}}>
+      <h2 style={{marginTop:0}}>Dashboard 2 — Classical + TSF (Green Zone)</h2>
 
       <div className="row" style={{alignItems:"end", flexWrap:"wrap"}}>
         <div>
@@ -431,16 +368,9 @@ export function DashboardTab(props){
         <MultiClassicalChart rows={rows} yDomain={sharedYDomain} />
       </ChartSection>
 
-      <ChartSection title="Targeted Seasonal Forecast (Gold Line)" mt={24}>
-        <GoldChart rows={rows} yDomain={sharedYDomain} />
-      </ChartSection>
-
       <ChartSection title="Targeted Seasonal Forecast (Gold Line & Green Zone)" mt={24}>
         <GoldAndGreenZoneChart rows={rows} yDomain={sharedYDomain} />
       </ChartSection>
     </div>
   );
 }
-
-
-export default DashboardTab;
