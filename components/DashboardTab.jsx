@@ -68,7 +68,7 @@ function useChartMath(rows){
 function InlineLegend({ items }){
   if (!items || !items.length) return null;
   return (
-    <div className="plasmic-legend" data-plasmic-name="legend" style={{display:"flex", justifyContent:"center", marginTop:12}}>
+    <div style={{display:"flex", justifyContent:"center", marginTop:12}}>
       <div style={{
         display:"inline-flex",
         flexWrap:"wrap",
@@ -141,7 +141,7 @@ function MultiClassicalChart({ rows, yDomain }){
   ];
 
   return (
-    <div ref={wrapRef} className="plasmic-chart" data-plasmic-name="chart" style={{ width: "100%" }}>
+    <div ref={wrapRef} style={{ width: "100%" }}>
       <svg width={W} height={H} style={{ display:"block", width:"100%" }}>
         <line x1={pad.left} y1={H-pad.bottom} x2={W-pad.right} y2={H-pad.bottom} stroke="#999"/>
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={H-pad.bottom} stroke="#999"/>
@@ -200,7 +200,7 @@ function GoldChart({ rows, yDomain }){
   ];
 
   return (
-    <div ref={wrapRef} className="plasmic-chart" data-plasmic-name="chart" style={{ width: "100%" }}>
+    <div ref={wrapRef} style={{ width: "100%" }}>
       <svg width={W} height={H} style={{ display:"block", width:"100%" }}>
         <line x1={pad.left} y1={H-pad.bottom} x2={W-pad.right} y2={H-pad.bottom} stroke="#999"/>
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={H-pad.bottom} stroke="#999"/>
@@ -266,7 +266,7 @@ function GoldAndGreenZoneChart({ rows, yDomain }){
   ];
 
   return (
-    <div ref={wrapRef} className="plasmic-chart" data-plasmic-name="chart" style={{ width: "100%" }}>
+    <div ref={wrapRef} style={{ width: "100%" }}>
       <svg width={W} height={H} style={{ display:"block", width:"100%" }}>
         <line x1={pad.left} y1={H-pad.bottom} x2={W-pad.right} y2={H-pad.bottom} stroke="#999"/>
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={H-pad.bottom} stroke="#999"/>
@@ -298,7 +298,7 @@ function GoldAndGreenZoneChart({ rows, yDomain }){
 // Section wrapper with explicit side padding
 function ChartSection({ title, children, mt=16 }){
   return (
-    <section className="plasmic-chart-section" data-plasmic-name="chart-section" style={{ marginTop: mt, paddingLeft: 32, paddingRight: 32 }}>
+    <section style={{ marginTop: mt, paddingLeft: 32, paddingRight: 32 }}>
       <h2 style={{margin:"6px 0 10px"}}>{title}</h2>
       {children}
     </section>
@@ -307,8 +307,6 @@ function ChartSection({ title, children, mt=16 }){
 
 export default function DashboardTab(props){
   const { className, style, ...rest } = props ?? {};
-  const { className, style, ...rest } = props ?? {};
-
   const [ids, setIds] = useState([]);
   const [forecastId, setForecastId] = useState("");
   const [allMonths, setAllMonths] = useState([]);
@@ -398,10 +396,10 @@ export default function DashboardTab(props){
   }, [rows]);
 
   return (
-    <div className={["plasmic-root", className].filter(Boolean).join(" ")} style={style} data-plasmic-root data-plasmic-name="root" {...rest}>
+    <div className={className} style={{ ...(style||{}), width:"100%" }} {...rest}>
       <h2 style={{marginTop:0}}>Dashboard — Classical + Targeted Seasonal</h2>
 
-      <div className="row plasmic-controls-row" data-plasmic-name="controls-row" style={{alignItems:"end", flexWrap:"wrap"}}>
+      <div className="row" style={{alignItems:"end", flexWrap:"wrap"}}>
         <div>
           <label>Forecast (forecast_name)</label><br/>
           <select className="input" value={forecastId} onChange={e=>setForecastId(e.target.value)}>

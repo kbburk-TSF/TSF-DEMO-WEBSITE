@@ -5,19 +5,8 @@ import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/
 import DashboardTab from '../components/DashboardTab';
 import DashboardTab2 from '../components/DashboardTab2';
 
-registerComponent(DashboardTab, {
-  name: 'DashboardTab2',
-  importPath: '../components/DashboardTab',
-  importName: 'default',
-  props: {}
-});
-
-registerComponent(DashboardTab2, {
-  name: 'DashboardTab2',
-  importPath: '../components/DashboardTab2',
-  importName: 'default',
-  props: {}
-});
+registerComponent(DashboardTab, { name: "DashboardTab" });
+registerComponent(DashboardTab2, { name: "DashboardTab2" });
 
 export default function PlasmicHost() {
   return <PlasmicCanvasHost />;
