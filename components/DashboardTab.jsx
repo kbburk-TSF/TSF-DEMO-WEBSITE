@@ -305,8 +305,9 @@ function ChartSection({ title, children, mt=16 }){
   );
 }
 
-export default function DashboardTab(props){
+export function DashboardTab(props){
   const { className, style, ...rest } = props ?? {};
+
   const [ids, setIds] = useState([]);
   const [forecastId, setForecastId] = useState("");
   const [allMonths, setAllMonths] = useState([]);
@@ -440,3 +441,6 @@ export default function DashboardTab(props){
     </div>
   );
 }
+
+
+export default DashboardTab;
