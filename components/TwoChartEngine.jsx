@@ -239,7 +239,7 @@ function GoldAndGreenZoneChart({ rows, yDomain }){
 function ChartSection({ title, children, mt=16 }){
   return (
     <section style={{ marginTop: mt, paddingLeft: 32, paddingRight: 32 }}>
-{children}
+      {children}
     </section>
   );
 }
@@ -382,6 +382,7 @@ export default function TwoChartEngine(){
           <button className="btn" onClick={run}>Run</button>
         </div>
         <div className="muted" style={{marginLeft:12}}>{status}</div>
+      </div>
 
       <ChartSection title="Classical Forecasts (ARIMA, SES, HWES)" mt={16}>
         <MultiClassicalChart rows={rows} yDomain={sharedYDomain} />
