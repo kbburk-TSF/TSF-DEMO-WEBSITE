@@ -5,33 +5,8 @@
 // - Historical actuals on all charts; bottom legend excludes High/Low items.
 
 import React, { useEffect, useMemo, useState, useRef, useLayoutEffect } from "react";
-// ==== Inlined fallbacks to remove '../api.js' dependency ====
-// Plasmic: you can later replace these with real API calls.
-async function listForecastIds() {
-  return [{ id: "demo", name: "Demo Forecast" }];
-}
-async function queryView({ date_from, date_to }) {
-  const MS_DAY = 86400000;
-  const start = date_from ? new Date(date_from + "T00:00:00Z") : new Date(Date.UTC(2025,0,1));
-  const end   = date_to   ? new Date(date_to   + "T00:00:00Z") : new Date(Date.UTC(2025,0,31));
-  const rows = [];
-  let i = 0;
-  for (let t = +start; t <= +end; t += MS_DAY, i++) {
-    const base = 100 + Math.sin(i/5)*10 + i*0.5;
-    rows.push({
-      date: new Date(t).toISOString().slice(0,10),
-      value: +(base + (i%3)).toFixed(1),
-      fv:    +(base + 3).toFixed(1),
-      low:   +(base - 6).toFixed(1),
-      high:  +(base + 6).toFixed(1),
-      ARIMA_M: +(base + (i%7 - 3)).toFixed(1),
-      HWES_M:  +(base + Math.cos(i/7)*2).toFixed(1),
-      SES_M:   +(base + Math.sin(i/9)*2).toFixed(1),
-    });
-  }
-  return { rows };
-}
-// ============================================================
+import { listForecastIds, queryView } from "../api.js";
+
 // ==== helpers ====
 const MS_DAY = 86400000;
 function parseYMD(s){ return new Date(s + "T00:00:00Z"); }
@@ -90,7 +65,7 @@ function useChartMath(rows){
 function InlineLegend({ items }){
   if (!items || !items.length) return null;
   return (
-    <div style={{display:"flex", justifyContent:"center", marginTop:12}}>
+    <div className="plasmic-legend" data-plasmic-name="legend" style={{display:"flex", justifyContent:"center", marginTop:12}}>
       <div style={{
         display:"inline-flex",
         flexWrap:"wrap",
@@ -163,7 +138,7 @@ function MultiClassicalChart({ rows, yDomain }){
   ];
 
   return (
-    <div ref={wrapRef} style={{ width: "100%" }}>
+    <div ref={wrapRef} className="plasmic-chart" data-plasmic-name="chart" style={{ width: "100%" }}>
       <svg width={W} height={H} style={{ display:"block", width:"100%" }}>
         <line x1={pad.left} y1={H-pad.bottom} x2={W-pad.right} y2={H-pad.bottom} stroke="#999"/>
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={H-pad.bottom} stroke="#999"/>
@@ -231,7 +206,7 @@ function GoldAndGreenZoneChart({ rows, yDomain }){
   ];
 
   return (
-    <div ref={wrapRef} style={{ width: "100%" }}>
+    <div ref={wrapRef} className="plasmic-chart" data-plasmic-name="chart" style={{ width: "100%" }}>
       <svg width={W} height={H} style={{ display:"block", width:"100%" }}>
         <line x1={pad.left} y1={H-pad.bottom} x2={W-pad.right} y2={H-pad.bottom} stroke="#999"/>
         <line x1={pad.left} y1={pad.top} x2={pad.left} y2={H-pad.bottom} stroke="#999"/>
@@ -263,14 +238,16 @@ function GoldAndGreenZoneChart({ rows, yDomain }){
 // Section wrapper with explicit side padding
 function ChartSection({ title, children, mt=16 }){
   return (
-    <section style={{ marginTop: mt, paddingLeft: 32, paddingRight: 32 }}>
+    <section className="plasmic-chart-section" data-plasmic-name="chart-section" style={{ marginTop: mt, paddingLeft: 32, paddingRight: 32 }}>
       <h2 style={{margin:"6px 0 10px"}}>{title}</h2>
       {children}
     </section>
   );
 }
 
-export default function DashboardTab2(){
+export default function DashboardTab2(props){
+  const { className, style, ...rest } = props ?? {};
+
   const [ids, setIds] = useState([]);
   const [forecastId, setForecastId] = useState("");
   const [allMonths, setAllMonths] = useState([]);
@@ -360,10 +337,10 @@ export default function DashboardTab2(){
   }, [rows]);
 
   return (
-    <div style={{width:"100%"}}>
+    <div className={["plasmic-root", className].filter(Boolean).join(" ")} style={style} data-plasmic-root data-plasmic-name="root" {...rest}>
       <h2 style={{marginTop:0}}>Dashboard 2 — Classical + TSF (Green Zone)</h2>
 
-      <div className="row" style={{alignItems:"end", flexWrap:"wrap"}}>
+      <div className="row plasmic-controls-row" data-plasmic-name="controls-row" style={{alignItems:"end", flexWrap:"wrap"}}>
         <div>
           <label>Forecast (forecast_name)</label><br/>
           <select className="input" value={forecastId} onChange={e=>setForecastId(e.target.value)}>
