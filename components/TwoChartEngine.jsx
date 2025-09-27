@@ -337,34 +337,14 @@ export default function TwoChartEngine(){
     <div style={{width:"100%"}}>
       <h2 style={{marginTop:0}}>Dashboard 2 — Classical + TSF (Green Zone)</h2>
 
-      
-      <div style={{display:"flex", alignItems:"center", gap:12, flexWrap:"nowrap"}}>
-        <div style={{display:"flex", alignItems:"center", gap:6}}>
-          <label>Forecast (forecast_name)</label>
+      <div className="row" style={{display:"flex", alignItems:"center", gap:12, flexWrap:"nowrap"\}\}>
+        <div>
+          <label>Forecast (forecast_name)</label><br/>
           <select className="input" value={forecastId} onChange={e=>setForecastId(e.target.value)}>
             {ids.map(x => <option key={x.id} value={x.id}>{x.name}</option>)}
           </select>
         </div>
-        <div style={{display:"flex", alignItems:"center", gap:6}}>
-          <label>Start month</label>
-          <select className="input" value={startMonth} onChange={e=>setStartMonth(e.target.value)}>
-            {monthOptions.map(m => <option key={m.value} value={m.value}>{m.label}</option>)}
-          </select>
-        </div>
-        <div style={{display:"flex", alignItems:"center", gap:6}}>
-          <label>Months to show</label>
-          <select className="input" value={monthsCount} onChange={e=>setMonthsCount(Number(e.target.value))}>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-          </select>
-        </div>
         <div>
-          <button className="btn" onClick={run}>Run</button>
-        </div>
-        <div className="muted" style={{marginLeft:12}}>{status}</div>
-      </div>
-<div>
           <label>Start month</label><br/>
           <select className="input" value={startMonth} onChange={e=>setStartMonth(e.target.value)}>
             {monthOptions.map(m => <option key={m.value} value={m.value}>{m.label}</option>)}
