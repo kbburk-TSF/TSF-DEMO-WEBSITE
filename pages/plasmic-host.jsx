@@ -1,19 +1,23 @@
 // pages/plasmic-host.jsx
 
 import * as React from 'react';
-import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/host';
-import ThreeChartsBlock from '../components/ThreeChartsBlock';
+import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
+import DashboardBlock from '../components/DashboardBlock';
 
-// Register exactly once. For Codegen projects, importPath MUST be a string.
-registerComponent(ThreeChartsBlock, {
-  name: 'ThreeChartsBlock',
-  importPath: '../components/ThreeChartsBlock', // no .jsx needed
+// Register the full dashboard block (selector + 3-over-1 charts)
+// No other edits required.
+registerComponent(DashboardBlock, {
+  name: 'DashboardBlock',
+  importPath: '../components/DashboardBlock', // no .jsx needed
   importName: 'default',
   props: {
-    rows: { type: 'object' },
     width: { type: 'number', defaultValue: 1200 },
-    height: { type: 'number', defaultValue: 260 },
-  },
+    topHeight: { type: 'number', defaultValue: 220 },
+    bottomHeight: { type: 'number', defaultValue: 360 },
+    // seriesList and rows are optional; leave unset to use built-in demo data
+    seriesList: { type: 'object' },
+    rows: { type: 'object' }
+  }
 });
 
 export default function PlasmicHost() {
