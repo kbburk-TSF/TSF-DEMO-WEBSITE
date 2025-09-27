@@ -1,3 +1,9 @@
+import { registerComponent } from "@plasmicapp/host";
+import ThreeChartsBlock from "../components/ThreeChartsBlock";
+registerComponent(ThreeChartsBlock, { name: "ThreeChartsBlock" });
+
+
+
 import * as React from 'react';
 import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
 
