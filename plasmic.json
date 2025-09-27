@@ -1077,6 +1077,18 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        },
+        {
+          "id": "hcE2-Y5phS-t",
+          "name": "default",
+          "displayName": "DashboardTab",
+          "componentImportPath": "../components/DashboardTab"
+        },
+        {
+          "id": "29wX_qGZDQWj",
+          "name": "default",
+          "displayName": "DashboardTab2",
+          "componentImportPath": "../components/DashboardTab2"
         }
       ],
       "customFunctions": []

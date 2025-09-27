@@ -178,6 +178,17 @@ function PlasmicFeatures__RenderFunc(props) {
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.freeBox__yAyR)}>
+            <div
+              data-plasmic-name={"demoEngineBox"}
+              data-plasmic-override={overrides.demoEngineBox}
+              className={classNames(projectcss.all, sty.demoEngineBox)}
+            >
+              <default
+                data-plasmic-name={"dashboardTab2"}
+                data-plasmic-override={overrides.dashboardTab2}
+                className={classNames("__wab_instance", sty.dashboardTab2)}
+              />
+            </div>
             <section
               data-plasmic-name={"section"}
               data-plasmic-override={overrides.section}
@@ -445,6 +456,8 @@ const PlasmicDescendants = {
     "pageBanner",
     "columns",
     "h1",
+    "demoEngineBox",
+    "dashboardTab2",
     "section",
     "foreground",
     "copy",
@@ -458,6 +471,8 @@ const PlasmicDescendants = {
   pageBanner: ["pageBanner", "columns", "h1"],
   columns: ["columns", "h1"],
   h1: ["h1"],
+  demoEngineBox: ["demoEngineBox", "dashboardTab2"],
+  dashboardTab2: ["dashboardTab2"],
   section: ["section", "foreground"],
   foreground: ["foreground"],
   copy: ["copy", "button"],
@@ -503,6 +518,8 @@ export const PlasmicFeatures = Object.assign(
     pageBanner: makeNodeComponent("pageBanner"),
     columns: makeNodeComponent("columns"),
     h1: makeNodeComponent("h1"),
+    demoEngineBox: makeNodeComponent("demoEngineBox"),
+    dashboardTab2: makeNodeComponent("dashboardTab2"),
     section: makeNodeComponent("section"),
     foreground: makeNodeComponent("foreground"),
     copy: makeNodeComponent("copy"),
