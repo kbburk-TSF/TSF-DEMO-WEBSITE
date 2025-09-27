@@ -1079,16 +1079,10 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         },
         {
-          "id": "hcE2-Y5phS-t",
-          "name": "default",
-          "displayName": "DashboardTab",
-          "componentImportPath": "../components/DashboardTab"
-        },
-        {
-          "id": "29wX_qGZDQWj",
-          "name": "default",
-          "displayName": "DashboardTab2",
-          "componentImportPath": "../components/DashboardTab2"
+          "id": "gsNtXq0N7YLw",
+          "name": "TwoChartEngine",
+          "displayName": "TwoChartEngine",
+          "componentImportPath": "./components/TwoChartEngine"
         }
       ],
       "customFunctions": []

@@ -210,12 +210,12 @@
   min-width: 0;
   padding: 8px;
 }
-.dashboardTab2:global(.__wab_instance) {
+.twoChartEngine:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: absolute;
-  left: 722px;
-  top: 18.671875px;
+  left: 449px;
+  top: 35.671875px;
 }
 .section {
   display: flex;

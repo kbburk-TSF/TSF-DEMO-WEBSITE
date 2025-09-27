@@ -20,6 +20,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Header from "../../Header"; // plasmic-import: 0XA8z88jHqGh/component
+import TwoChartEngine from "../../TwoChartEngine"; // plasmic-import: gsNtXq0N7YLw/codeComponent
 import Button from "../../Button"; // plasmic-import: BmK5KSjeUCoq/component
 import HeroSection from "../../HeroSection"; // plasmic-import: asQL227ll1f6/component
 import Footer from "../../Footer"; // plasmic-import: _as8O7FbI-4s/component
@@ -183,10 +184,10 @@ function PlasmicFeatures__RenderFunc(props) {
               data-plasmic-override={overrides.demoEngineBox}
               className={classNames(projectcss.all, sty.demoEngineBox)}
             >
-              <default
-                data-plasmic-name={"dashboardTab2"}
-                data-plasmic-override={overrides.dashboardTab2}
-                className={classNames("__wab_instance", sty.dashboardTab2)}
+              <TwoChartEngine
+                data-plasmic-name={"twoChartEngine"}
+                data-plasmic-override={overrides.twoChartEngine}
+                className={classNames("__wab_instance", sty.twoChartEngine)}
               />
             </div>
             <section
@@ -208,7 +209,7 @@ function PlasmicFeatures__RenderFunc(props) {
                       sty.h3__fdezQ
                     )}
                   >
-                    {"The standard Lorem Ipsum passage"}
+                    {"CHANGING THIS COPY TO KNOW THAT THIS IS THE NEW PAGE"}
                   </h3>
                   <div
                     className={classNames(
@@ -457,7 +458,7 @@ const PlasmicDescendants = {
     "columns",
     "h1",
     "demoEngineBox",
-    "dashboardTab2",
+    "twoChartEngine",
     "section",
     "foreground",
     "copy",
@@ -471,8 +472,8 @@ const PlasmicDescendants = {
   pageBanner: ["pageBanner", "columns", "h1"],
   columns: ["columns", "h1"],
   h1: ["h1"],
-  demoEngineBox: ["demoEngineBox", "dashboardTab2"],
-  dashboardTab2: ["dashboardTab2"],
+  demoEngineBox: ["demoEngineBox", "twoChartEngine"],
+  twoChartEngine: ["twoChartEngine"],
   section: ["section", "foreground"],
   foreground: ["foreground"],
   copy: ["copy", "button"],
@@ -519,7 +520,7 @@ export const PlasmicFeatures = Object.assign(
     columns: makeNodeComponent("columns"),
     h1: makeNodeComponent("h1"),
     demoEngineBox: makeNodeComponent("demoEngineBox"),
-    dashboardTab2: makeNodeComponent("dashboardTab2"),
+    twoChartEngine: makeNodeComponent("twoChartEngine"),
     section: makeNodeComponent("section"),
     foreground: makeNodeComponent("foreground"),
     copy: makeNodeComponent("copy"),
