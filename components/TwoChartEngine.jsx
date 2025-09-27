@@ -382,7 +382,6 @@ export default function TwoChartEngine(){
           <button className="btn" onClick={run}>Run</button>
         </div>
         <div className="muted" style={{marginLeft:12}}>{status}</div>
-      </div>
 
       <ChartSection title="Classical Forecasts (ARIMA, SES, HWES)" mt={16}>
         <MultiClassicalChart rows={rows} yDomain={sharedYDomain} />
