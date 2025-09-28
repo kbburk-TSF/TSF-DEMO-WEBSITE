@@ -10,9 +10,11 @@
 // Component: 7bYJq01RZZoi
 import * as React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -286,7 +288,7 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
                 displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck005Jpeg.jpg",
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck005Jpeg2.jpg",
                   fullWidth: 1920,
                   fullHeight: 1080,
                   aspectRatio: undefined
@@ -523,6 +525,39 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
                 }}
               />
             </div>
+            <div
+              data-plasmic-name={"container18"}
+              data-plasmic-override={overrides.container18}
+              className={classNames(projectcss.all, sty.container18)}
+            >
+              <PlasmicLink__
+                data-plasmic-name={"link"}
+                data-plasmic-override={overrides.link}
+                className={classNames(projectcss.all, projectcss.a, sty.link)}
+                component={Link}
+                href={"mailto:kevin@temporalinertia.com"}
+                platform={"nextjs"}
+                target={"_blank"}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__qaFbl)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/tsf_demo_website/images/tsfPitchDeck016Jpeg.jpg",
+                    fullWidth: 1920,
+                    fullHeight: 1080,
+                    aspectRatio: undefined
+                  }}
+                />
+              </PlasmicLink__>
+            </div>
           </div>
           <Footer
             data-plasmic-name={"footer"}
@@ -560,6 +595,8 @@ const PlasmicDescendants = {
     "container15",
     "container16",
     "container17",
+    "container18",
+    "link",
     "footer"
   ],
 
@@ -585,7 +622,9 @@ const PlasmicDescendants = {
     "container14",
     "container15",
     "container16",
-    "container17"
+    "container17",
+    "container18",
+    "link"
   ],
 
   container3: ["container3"],
@@ -603,6 +642,8 @@ const PlasmicDescendants = {
   container15: ["container15"],
   container16: ["container16"],
   container17: ["container17"],
+  container18: ["container18", "link"],
+  link: ["link"],
   footer: ["footer"]
 };
 
@@ -660,6 +701,8 @@ export const PlasmicInvestmentOpportunity = Object.assign(
     container15: makeNodeComponent("container15"),
     container16: makeNodeComponent("container16"),
     container17: makeNodeComponent("container17"),
+    container18: makeNodeComponent("container18"),
+    link: makeNodeComponent("link"),
     footer: makeNodeComponent("footer"),
     // Metadata about props expected for PlasmicInvestmentOpportunity
     internalVariantProps: PlasmicInvestmentOpportunity__VariantProps,
