@@ -105,7 +105,11 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
               data-plasmic-override={overrides.pageBanner}
               className={classNames(projectcss.all, sty.pageBanner)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__yCxsu)}>
+              <div
+                data-plasmic-name={"freeBox"}
+                data-plasmic-override={overrides.freeBox}
+                className={classNames(projectcss.all, sty.freeBox)}
+              >
                 <div
                   data-plasmic-name={"columns"}
                   data-plasmic-override={overrides.columns}
@@ -114,42 +118,25 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
                   <div
                     className={classNames(projectcss.all, sty.column__gVm5C)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__ydPv7)}
+                    <h1
+                      data-plasmic-name={"h1"}
+                      data-plasmic-override={overrides.h1}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1
+                      )}
                     >
-                      <h1
-                        data-plasmic-name={"h1"}
-                        data-plasmic-override={overrides.h1}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1
-                        )}
-                      >
-                        {"Investment Opportunity"}
-                      </h1>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__rdJV
-                        )}
-                      >
-                        {
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                        }
-                      </div>
-                    </div>
+                      {"TSF Pitch Deck"}
+                    </h1>
                   </div>
                   <div
                     className={classNames(projectcss.all, sty.column__hjK6H)}
                   >
                     <PlasmicImg__
-                      data-plasmic-name={"img"}
-                      data-plasmic-override={overrides.img}
                       alt={""}
-                      className={classNames(sty.img)}
+                      className={classNames(sty.img__mnCs1)}
                       displayHeight={"auto"}
                       displayMaxHeight={"none"}
                       displayMaxWidth={
@@ -174,9 +161,9 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
                               aspectRatio: undefined
                             }
                           : {
-                              src: "/plasmic/tsf_demo_website/images/greenChameleonS9Cc2SKySjmUnsplashJpg.jpg",
+                              src: "/plasmic/tsf_demo_website/images/tsfPitchDeck001Jpeg.jpg",
                               fullWidth: 1920,
-                              fullHeight: 1280,
+                              fullHeight: 1080,
                               aspectRatio: undefined
                             }
                       }
@@ -196,106 +183,345 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
               data-plasmic-override={overrides.container3}
               className={classNames(projectcss.all, sty.container3)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__miqre)}>
-                <h3
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h3,
-                    projectcss.__wab_text,
-                    sty.h3__aH4B
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Professional And\nDedicated Consulting Services..."
-                    : "Terms of Service heading lorem"}
-                </h3>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__i7LeH
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "
-                    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "}
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__m7ZOl)}>
-                <h3
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h3,
-                    projectcss.__wab_text,
-                    sty.h3__gZXvi
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Professional And\nDedicated Consulting Services..."
-                    : "Lorem Heading main privacy policy"}
-                </h3>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__wgIx
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "
-                    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "}
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox___0CCk4)}>
-                <h3
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h3,
-                    projectcss.__wab_text,
-                    sty.h3___3TsLa
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Professional And\nDedicated Consulting Services..."
-                    : "Lorem Heading main privacy policy"}
-                </h3>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__wZ5C8
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "
-                    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "}
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__rG2G)}>
-                <h3
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h3,
-                    projectcss.__wab_text,
-                    sty.h3__noAyf
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Professional And\nDedicated Consulting Services..."
-                    : "Lorem Heading main privacy policy"}
-                </h3>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__peA4K
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "
-                    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula, eu malesuada tortor eros dapibus mi. Proin laoreet efficitur suscipit. Donec molestie volutpat euismod. Nulla gravida ligula in eros facilisis, sed dignissim tellus aliquam. Etiam convallis enim nisi, at suscipit tortor pulvinar at. "}
-                </div>
-              </div>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__wPtcB)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck002Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container4"}
+              data-plasmic-override={overrides.container4}
+              className={classNames(projectcss.all, sty.container4)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__me8Km)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck003Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container5"}
+              data-plasmic-override={overrides.container5}
+              className={classNames(projectcss.all, sty.container5)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__gJLh)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck003Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container6"}
+              data-plasmic-override={overrides.container6}
+              className={classNames(projectcss.all, sty.container6)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__tsJnm)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck004Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container7"}
+              data-plasmic-override={overrides.container7}
+              className={classNames(projectcss.all, sty.container7)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___7H5V4)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck005Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container8"}
+              data-plasmic-override={overrides.container8}
+              className={classNames(projectcss.all, sty.container8)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__dR5Xp)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck006Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container9"}
+              data-plasmic-override={overrides.container9}
+              className={classNames(projectcss.all, sty.container9)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__bkEn)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck007Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container10"}
+              data-plasmic-override={overrides.container10}
+              className={classNames(projectcss.all, sty.container10)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__qJat)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck008Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container11"}
+              data-plasmic-override={overrides.container11}
+              className={classNames(projectcss.all, sty.container11)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___4PU04)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck009Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container12"}
+              data-plasmic-override={overrides.container12}
+              className={classNames(projectcss.all, sty.container12)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__gonS)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck010Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container13"}
+              data-plasmic-override={overrides.container13}
+              className={classNames(projectcss.all, sty.container13)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___8ScqF)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck011Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container14"}
+              data-plasmic-override={overrides.container14}
+              className={classNames(projectcss.all, sty.container14)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___8Nh5Z)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck012Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container15"}
+              data-plasmic-override={overrides.container15}
+              className={classNames(projectcss.all, sty.container15)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__qxuBn)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck013Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container16"}
+              data-plasmic-override={overrides.container16}
+              className={classNames(projectcss.all, sty.container16)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__lOsKa)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck014Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"container17"}
+              data-plasmic-override={overrides.container17}
+              className={classNames(projectcss.all, sty.container17)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__c9Cpm)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck015Jpeg.jpg",
+                  fullWidth: 1920,
+                  fullHeight: 1080,
+                  aspectRatio: undefined
+                }}
+              />
             </div>
           </div>
           <Footer
@@ -315,22 +541,68 @@ const PlasmicDescendants = {
     "header",
     "mainSection",
     "pageBanner",
+    "freeBox",
     "columns",
     "h1",
-    "img",
     "mainSection2",
     "container3",
+    "container4",
+    "container5",
+    "container6",
+    "container7",
+    "container8",
+    "container9",
+    "container10",
+    "container11",
+    "container12",
+    "container13",
+    "container14",
+    "container15",
+    "container16",
+    "container17",
     "footer"
   ],
 
   header: ["header"],
-  mainSection: ["mainSection", "pageBanner", "columns", "h1", "img"],
-  pageBanner: ["pageBanner", "columns", "h1", "img"],
-  columns: ["columns", "h1", "img"],
+  mainSection: ["mainSection", "pageBanner", "freeBox", "columns", "h1"],
+  pageBanner: ["pageBanner", "freeBox", "columns", "h1"],
+  freeBox: ["freeBox", "columns", "h1"],
+  columns: ["columns", "h1"],
   h1: ["h1"],
-  img: ["img"],
-  mainSection2: ["mainSection2", "container3"],
+  mainSection2: [
+    "mainSection2",
+    "container3",
+    "container4",
+    "container5",
+    "container6",
+    "container7",
+    "container8",
+    "container9",
+    "container10",
+    "container11",
+    "container12",
+    "container13",
+    "container14",
+    "container15",
+    "container16",
+    "container17"
+  ],
+
   container3: ["container3"],
+  container4: ["container4"],
+  container5: ["container5"],
+  container6: ["container6"],
+  container7: ["container7"],
+  container8: ["container8"],
+  container9: ["container9"],
+  container10: ["container10"],
+  container11: ["container11"],
+  container12: ["container12"],
+  container13: ["container13"],
+  container14: ["container14"],
+  container15: ["container15"],
+  container16: ["container16"],
+  container17: ["container17"],
   footer: ["footer"]
 };
 
@@ -369,11 +641,25 @@ export const PlasmicInvestmentOpportunity = Object.assign(
     header: makeNodeComponent("header"),
     mainSection: makeNodeComponent("mainSection"),
     pageBanner: makeNodeComponent("pageBanner"),
+    freeBox: makeNodeComponent("freeBox"),
     columns: makeNodeComponent("columns"),
     h1: makeNodeComponent("h1"),
-    img: makeNodeComponent("img"),
     mainSection2: makeNodeComponent("mainSection2"),
     container3: makeNodeComponent("container3"),
+    container4: makeNodeComponent("container4"),
+    container5: makeNodeComponent("container5"),
+    container6: makeNodeComponent("container6"),
+    container7: makeNodeComponent("container7"),
+    container8: makeNodeComponent("container8"),
+    container9: makeNodeComponent("container9"),
+    container10: makeNodeComponent("container10"),
+    container11: makeNodeComponent("container11"),
+    container12: makeNodeComponent("container12"),
+    container13: makeNodeComponent("container13"),
+    container14: makeNodeComponent("container14"),
+    container15: makeNodeComponent("container15"),
+    container16: makeNodeComponent("container16"),
+    container17: makeNodeComponent("container17"),
     footer: makeNodeComponent("footer"),
     // Metadata about props expected for PlasmicInvestmentOpportunity
     internalVariantProps: PlasmicInvestmentOpportunity__VariantProps,

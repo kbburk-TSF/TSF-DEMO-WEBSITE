@@ -898,6 +898,26 @@
           "id": "ueZRFirmKqbo",
           "name": "TsfLogoHorizontalWhiteSvgIcon",
           "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__TsfLogoHorizontalWhiteSvg.jsx"
+        },
+        {
+          "id": "5pcknkQLbU7G",
+          "name": "Icon8Icon",
+          "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__Icon8.jsx"
+        },
+        {
+          "id": "1J_grS1PpL0A",
+          "name": "Icon13Icon",
+          "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__Icon13.jsx"
+        },
+        {
+          "id": "rDA1cKhnRL0e",
+          "name": "Icon10Icon",
+          "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__Icon10.jsx"
+        },
+        {
+          "id": "SuL-HWcVSrkx",
+          "name": "Icon11Icon",
+          "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__Icon11.jsx"
         }
       ],
       "images": [
@@ -1315,6 +1335,81 @@
           "id": "Sso4j_iJPSch",
           "name": "SeasonalForecasts-3DPlot-ALL.jpg",
           "filePath": "../public/plasmic/tsf_demo_website/images/seasonalForecasts3DPlotAllJpg.jpg"
+        },
+        {
+          "id": "Bq8mO5w45lEF",
+          "name": "‎TSF_PitchDeck.‎001.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck001Jpeg.jpg"
+        },
+        {
+          "id": "D7jkXNKosuAb",
+          "name": "‎TSF_PitchDeck.‎002.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck002Jpeg.jpg"
+        },
+        {
+          "id": "e1KRANR_3yLc",
+          "name": "‎TSF_PitchDeck.‎003.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck003Jpeg.jpg"
+        },
+        {
+          "id": "thGG6FUTFhct",
+          "name": "‎TSF_PitchDeck.‎004.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck004Jpeg.jpg"
+        },
+        {
+          "id": "OmFOkJOD7nkb",
+          "name": "‎TSF_PitchDeck.‎005.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck005Jpeg.jpg"
+        },
+        {
+          "id": "_YilH6PHxVkx",
+          "name": "‎TSF_PitchDeck.‎006.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck006Jpeg.jpg"
+        },
+        {
+          "id": "IASha0wr1bWx",
+          "name": "‎TSF_PitchDeck.‎007.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck007Jpeg.jpg"
+        },
+        {
+          "id": "quIiBm1vGP0y",
+          "name": "‎TSF_PitchDeck.‎008.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck008Jpeg.jpg"
+        },
+        {
+          "id": "GSe3T7XqBiDj",
+          "name": "‎TSF_PitchDeck.‎009.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck009Jpeg.jpg"
+        },
+        {
+          "id": "n9d7O_pgHo-9",
+          "name": "‎TSF_PitchDeck.‎010.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck010Jpeg.jpg"
+        },
+        {
+          "id": "-qNoopsSx0dq",
+          "name": "‎TSF_PitchDeck.‎011.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck011Jpeg.jpg"
+        },
+        {
+          "id": "ASV-HgbnkGK2",
+          "name": "‎TSF_PitchDeck.‎012.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck012Jpeg.jpg"
+        },
+        {
+          "id": "sDdfjb-9uXyr",
+          "name": "‎TSF_PitchDeck.‎013.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck013Jpeg.jpg"
+        },
+        {
+          "id": "WRMYIfJcfKcN",
+          "name": "‎TSF_PitchDeck.‎014.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck014Jpeg.jpg"
+        },
+        {
+          "id": "MgQegNHz-2oV",
+          "name": "‎TSF_PitchDeck.‎015.jpeg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/tsfPitchDeck015Jpeg.jpg"
         }
       ],
       "indirect": false,
