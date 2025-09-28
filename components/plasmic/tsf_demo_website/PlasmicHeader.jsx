@@ -18,12 +18,11 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import Button from "../../Button"; // plasmic-import: BmK5KSjeUCoq/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: tapQSmgujw7smcBwiTayug/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: tapQSmgujw7smcBwiTayug/projectcss
 import sty from "./PlasmicHeader.module.css"; // plasmic-import: 0XA8z88jHqGh/css
-import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: CTrKh01FN7bB/icon
+import TsfLogoHorizontalSvgIcon from "./icons/PlasmicIcon__TsfLogoHorizontalSvg"; // plasmic-import: UFoKPuFYFNSa/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: DI5o05B9KHOk/icon
 
 createPlasmicElementProxy;
@@ -89,7 +88,7 @@ function PlasmicHeader__RenderFunc(props) {
             href={`/`}
             platform={"nextjs"}
           >
-            <Icon2Icon
+            <TsfLogoHorizontalSvgIcon
               className={classNames(projectcss.all, sty.svg__hXit)}
               role={"img"}
             />
@@ -102,7 +101,7 @@ function PlasmicHeader__RenderFunc(props) {
                 sty.link__uhuvI
               )}
               component={Link}
-              href={`/about-us`}
+              href={`/`}
               platform={"nextjs"}
             >
               {false ? (
@@ -118,7 +117,7 @@ function PlasmicHeader__RenderFunc(props) {
                   sty.text__gecEd
                 )}
               >
-                {"About Us"}
+                {"About TSF"}
               </div>
               {false ? (
                 <IconIcon
@@ -134,7 +133,7 @@ function PlasmicHeader__RenderFunc(props) {
                 sty.link__oGxw8
               )}
               component={Link}
-              href={`/features`}
+              href={`/engine`}
               platform={"nextjs"}
             >
               {false ? (
@@ -150,7 +149,7 @@ function PlasmicHeader__RenderFunc(props) {
                   sty.text__cxdSn
                 )}
               >
-                {"Features"}
+                {"TSF Engine Demo"}
               </div>
               {false ? (
                 <IconIcon
@@ -182,7 +181,7 @@ function PlasmicHeader__RenderFunc(props) {
                   sty.text__bAva
                 )}
               >
-                {"Pricing "}
+                {"The Science"}
               </div>
               {false ? (
                 <IconIcon
@@ -214,7 +213,7 @@ function PlasmicHeader__RenderFunc(props) {
                   sty.text___1IU1Z
                 )}
               >
-                {"Contact"}
+                {"Investment Opportunity"}
               </div>
               {false ? (
                 <IconIcon
@@ -255,24 +254,6 @@ function PlasmicHeader__RenderFunc(props) {
                 />
               ) : null}
             </PlasmicLink__>
-            <Button
-              data-plasmic-name={"button"}
-              data-plasmic-override={overrides.button}
-              className={classNames("__wab_instance", sty.button)}
-              color={"neutral"}
-              label={
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__d1Wj
-                  )}
-                >
-                  {"Get started"}
-                </div>
-              }
-              size={"extraLarge"}
-            />
           </div>
         </div>
       </div>
@@ -281,8 +262,7 @@ function PlasmicHeader__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "button"],
-  button: ["button"]
+  root: ["root"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -317,7 +297,6 @@ export const PlasmicHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicHeader
     internalVariantProps: PlasmicHeader__VariantProps,
     internalArgProps: PlasmicHeader__ArgProps

@@ -16,7 +16,10 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  hasVariant
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Header from "../../Header"; // plasmic-import: 0XA8z88jHqGh/component
@@ -26,6 +29,7 @@ import BlogPosts from "../../BlogPosts"; // plasmic-import: MiL8App_emDg/compone
 import CtaBlock from "../../CtaBlock"; // plasmic-import: XWoJFMRAhX-a/component
 import HeroSection from "../../HeroSection"; // plasmic-import: asQL227ll1f6/component
 import Footer from "../../Footer"; // plasmic-import: _as8O7FbI-4s/component
+import Drawer from "../../Drawer"; // plasmic-import: l9ua_tRYWVKP/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: tapQSmgujw7smcBwiTayug/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: tapQSmgujw7smcBwiTayug/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -69,6 +73,24 @@ function PlasmicHomepage__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   const globalVariants = _useGlobalVariants();
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "drawer.isOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   const styleTokensClassNames = _useStyleTokens();
   return (
     <React.Fragment>
@@ -126,7 +148,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       >
                         {hasVariant(globalVariants, "screen", "mobileOnly")
                           ? "Ready to accept or acquiesce willing."
-                          : "Hero for your SaaS landing page."}
+                          : "Accuracy Made Simple.\nConfidence Made Certain."}
                       </h1>
                       <div
                         className={classNames(
@@ -136,7 +158,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         )}
                       >
                         {
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ."
+                          "Welcome to the future of time series forecasting. \n\n\r\nPowered by a breakthrough in forecasting science, Targeted Seasonal Forecasts deliver daily predictions with month-long horizons \u2014 and quantified confidence in every single value. The proprietary library of irregular seasonal models reveals objective patterns in the historical data. Each forecast value is selected from up to 2,500 different forecast models, based on historical patterns of accuracy. \r\n"
                         }
                       </div>
                       <Button
@@ -153,9 +175,39 @@ function PlasmicHomepage__RenderFunc(props) {
                               sty.text___7Dx1F
                             )}
                           >
-                            {"Get started"}
+                            {"Try it yourself"}
                           </div>
                         }
+                        onClick={async event => {
+                          const $steps = {};
+                          $steps["goToTsfEngineDemo"] = true
+                            ? (() => {
+                                const actionArgs = { destination: `/engine` };
+                                return (({ destination }) => {
+                                  if (
+                                    typeof destination === "string" &&
+                                    destination.startsWith("#")
+                                  ) {
+                                    document
+                                      .getElementById(destination.substr(1))
+                                      .scrollIntoView({ behavior: "smooth" });
+                                  } else {
+                                    __nextRouter?.push(destination);
+                                  }
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["goToTsfEngineDemo"] != null &&
+                            typeof $steps["goToTsfEngineDemo"] === "object" &&
+                            typeof $steps["goToTsfEngineDemo"].then ===
+                              "function"
+                          ) {
+                            $steps["goToTsfEngineDemo"] = await $steps[
+                              "goToTsfEngineDemo"
+                            ];
+                          }
+                        }}
                         size={"extraLarge"}
                       />
                     </div>
@@ -163,8 +215,22 @@ function PlasmicHomepage__RenderFunc(props) {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ftgRx)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__dDgr6)}
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__ld3Y1)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"553px"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/tsf_demo_website/images/tsfLogoStackedSvg.svg",
+                        fullWidth: 612,
+                        fullHeight: 515.2,
+                        aspectRatio: 1.187888
+                      }}
                     />
                   </div>
                 </div>
@@ -712,6 +778,26 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
+
+          <Drawer
+            data-plasmic-name={"drawer"}
+            data-plasmic-override={overrides.drawer}
+            className={classNames("__wab_instance", sty.drawer)}
+            isOpen={generateStateValueProp($state, ["drawer", "isOpen"])}
+            onOpenChange={async (...eventArgs) => {
+              generateStateOnChangeProp($state, ["drawer", "isOpen"]).apply(
+                null,
+                eventArgs
+              );
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -738,7 +824,8 @@ const PlasmicDescendants = {
     "blogPosts",
     "ctaBlock",
     "heroSection",
-    "footer"
+    "footer",
+    "drawer"
   ],
 
   header: ["header"],
@@ -770,7 +857,8 @@ const PlasmicDescendants = {
   blogPosts: ["blogPosts"],
   ctaBlock: ["ctaBlock"],
   heroSection: ["heroSection"],
-  footer: ["footer"]
+  footer: ["footer"],
+  drawer: ["drawer"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -823,6 +911,7 @@ export const PlasmicHomepage = Object.assign(
     ctaBlock: makeNodeComponent("ctaBlock"),
     heroSection: makeNodeComponent("heroSection"),
     footer: makeNodeComponent("footer"),
+    drawer: makeNodeComponent("drawer"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

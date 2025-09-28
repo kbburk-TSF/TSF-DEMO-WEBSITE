@@ -110,7 +110,7 @@
 }
 .text__gecEd {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--token-UfVR25i-txiR);
   line-height: 26px;
   font-family: "Montserrat", sans-serif;
@@ -150,7 +150,7 @@
   flex-shrink: 0;
 }
 .text__cxdSn {
-  font-weight: 400;
+  font-weight: 800;
   color: #05050599;
   font-size: 18px;
   line-height: 26px;
@@ -190,7 +190,7 @@
   flex-shrink: 0;
 }
 .text__bAva {
-  font-weight: 400;
+  font-weight: 800;
   color: #05050599;
   font-size: 18px;
   line-height: 26px;
@@ -230,7 +230,7 @@
   flex-shrink: 0;
 }
 .text___1IU1Z {
-  font-weight: 400;
+  font-weight: 700;
   color: #05050599;
   font-size: 18px;
   line-height: 26px;
@@ -270,7 +270,7 @@
   flex-shrink: 0;
 }
 .text__j1O {
-  font-weight: 400;
+  font-weight: 800;
   color: #05050599;
   font-size: 18px;
   line-height: 26px;
@@ -282,18 +282,4 @@
   object-fit: cover;
   color: #05050599;
   flex-shrink: 0;
-}
-.button:global(.__wab_instance):global(.__wab_instance) {
-  max-width: 100%;
-}
-.svg__qYuT3 {
-  position: relative;
-  height: 1em;
-}
-.text__d1Wj {
-  white-space: pre;
-}
-.svg__tdR1C {
-  position: relative;
-  height: 1em;
 }
