@@ -475,6 +475,35 @@ function PlasmicHomepage__RenderFunc(props) {
                         {"The Model of Temporal Inertia"}
                       </div>
                     }
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["goToTheScience"] = true
+                        ? (() => {
+                            const actionArgs = { destination: `/science` };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToTheScience"] != null &&
+                        typeof $steps["goToTheScience"] === "object" &&
+                        typeof $steps["goToTheScience"].then === "function"
+                      ) {
+                        $steps["goToTheScience"] = await $steps[
+                          "goToTheScience"
+                        ];
+                      }
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__nnBu)}>
@@ -513,6 +542,37 @@ function PlasmicHomepage__RenderFunc(props) {
                         {"Investment Opportunity"}
                       </div>
                     }
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["goToInvestmentOpportunity"] = true
+                        ? (() => {
+                            const actionArgs = { destination: `/investment` };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToInvestmentOpportunity"] != null &&
+                        typeof $steps["goToInvestmentOpportunity"] ===
+                          "object" &&
+                        typeof $steps["goToInvestmentOpportunity"].then ===
+                          "function"
+                      ) {
+                        $steps["goToInvestmentOpportunity"] = await $steps[
+                          "goToInvestmentOpportunity"
+                        ];
+                      }
+                    }}
                   />
                 </div>
               </div>

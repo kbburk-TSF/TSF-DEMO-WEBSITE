@@ -753,6 +753,34 @@
           "cssFilePath": "plasmic/tsf_demo_website/PlasmicTooltip.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "OHeNgZhuvdua",
+          "name": "TheScience",
+          "type": "managed",
+          "projectId": "tapQSmgujw7smcBwiTayug",
+          "renderModuleFilePath": "plasmic/tsf_demo_website/PlasmicTheScience.jsx",
+          "importSpec": {
+            "modulePath": "../pages/science.jsx"
+          },
+          "cssFilePath": "plasmic/tsf_demo_website/PlasmicTheScience.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/science"
+        },
+        {
+          "id": "7bYJq01RZZoi",
+          "name": "InvestmentOpportunity",
+          "type": "managed",
+          "projectId": "tapQSmgujw7smcBwiTayug",
+          "renderModuleFilePath": "plasmic/tsf_demo_website/PlasmicInvestmentOpportunity.jsx",
+          "importSpec": {
+            "modulePath": "../pages/investment.jsx"
+          },
+          "cssFilePath": "plasmic/tsf_demo_website/PlasmicInvestmentOpportunity.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/investment"
         }
       ],
       "icons": [
@@ -1277,6 +1305,11 @@
           "id": "2lonpvWn3EiV",
           "name": "Targeted-Gold.png",
           "filePath": "../public/plasmic/tsf_demo_website/images/targetedGoldPng.png"
+        },
+        {
+          "id": "AbT4f2jx31Ts",
+          "name": "MI_Crash.png",
+          "filePath": "../public/plasmic/tsf_demo_website/images/miCrashPng.png"
         }
       ],
       "indirect": false,

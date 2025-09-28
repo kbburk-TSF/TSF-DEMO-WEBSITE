@@ -111,32 +111,26 @@ function PlasmicTsfEngineDemo__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.columns)}
               >
                 <div className={classNames(projectcss.all, sty.column__w636C)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__yosGo)}
+                  <h1
+                    data-plasmic-name={"h1"}
+                    data-plasmic-override={overrides.h1}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1
+                    )}
                   >
-                    <h1
-                      data-plasmic-name={"h1"}
-                      data-plasmic-override={overrides.h1}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1
-                      )}
-                    >
-                      {"Our Features "}
-                    </h1>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__pTq0
-                      )}
-                    >
-                      {
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
-                      }
-                    </div>
+                    {"TSF Engine Demo"}
+                  </h1>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__no8Co
+                    )}
+                  >
+                    {"Enter some text"}
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.column__nnp8N)}>
@@ -167,9 +161,9 @@ function PlasmicTsfEngineDemo__RenderFunc(props) {
                             aspectRatio: undefined
                           }
                         : {
-                            src: "/plasmic/tsf_demo_website/images/williamHook9E9Pd9BlAtoUnsplashJpg.jpg",
-                            fullWidth: 1920,
-                            fullHeight: 1280,
+                            src: "/plasmic/tsf_demo_website/images/miCrashPng.png",
+                            fullWidth: 1123,
+                            fullHeight: 1097,
                             aspectRatio: undefined
                           }
                     }

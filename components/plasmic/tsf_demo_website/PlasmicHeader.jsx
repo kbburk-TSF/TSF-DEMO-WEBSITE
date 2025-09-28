@@ -165,7 +165,7 @@ function PlasmicHeader__RenderFunc(props) {
                 sty.link___21GEn
               )}
               component={Link}
-              href={`/pricing`}
+              href={`/science`}
               platform={"nextjs"}
             >
               {false ? (
@@ -197,7 +197,7 @@ function PlasmicHeader__RenderFunc(props) {
                 sty.link__to415
               )}
               component={Link}
-              href={`/contact`}
+              href={`/investment`}
               platform={"nextjs"}
             >
               {false ? (
@@ -218,38 +218,6 @@ function PlasmicHeader__RenderFunc(props) {
               {false ? (
                 <IconIcon
                   className={classNames(projectcss.all, sty.svg__bgAwg)}
-                  role={"img"}
-                />
-              ) : null}
-            </PlasmicLink__>
-            <PlasmicLink__
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.link__yBtax
-              )}
-              component={Link}
-              href={`/blog`}
-              platform={"nextjs"}
-            >
-              {false ? (
-                <IconIcon
-                  className={classNames(projectcss.all, sty.svg__jzItn)}
-                  role={"img"}
-                />
-              ) : null}
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__j1O
-                )}
-              >
-                {"Blog"}
-              </div>
-              {false ? (
-                <IconIcon
-                  className={classNames(projectcss.all, sty.svg__rHvh9)}
                   role={"img"}
                 />
               ) : null}
