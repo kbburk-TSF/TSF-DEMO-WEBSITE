@@ -227,29 +227,6 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
               />
             </div>
             <div
-              data-plasmic-name={"container5"}
-              data-plasmic-override={overrides.container5}
-              className={classNames(projectcss.all, sty.container5)}
-            >
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__gJLh)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"auto"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/tsf_demo_website/images/tsfPitchDeck003Jpeg.jpg",
-                  fullWidth: 1920,
-                  fullHeight: 1080,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
-            <div
               data-plasmic-name={"container6"}
               data-plasmic-override={overrides.container6}
               className={classNames(projectcss.all, sty.container6)}
@@ -582,7 +559,6 @@ const PlasmicDescendants = {
     "mainSection2",
     "container3",
     "container4",
-    "container5",
     "container6",
     "container7",
     "container8",
@@ -610,7 +586,6 @@ const PlasmicDescendants = {
     "mainSection2",
     "container3",
     "container4",
-    "container5",
     "container6",
     "container7",
     "container8",
@@ -629,7 +604,6 @@ const PlasmicDescendants = {
 
   container3: ["container3"],
   container4: ["container4"],
-  container5: ["container5"],
   container6: ["container6"],
   container7: ["container7"],
   container8: ["container8"],
@@ -688,7 +662,6 @@ export const PlasmicInvestmentOpportunity = Object.assign(
     mainSection2: makeNodeComponent("mainSection2"),
     container3: makeNodeComponent("container3"),
     container4: makeNodeComponent("container4"),
-    container5: makeNodeComponent("container5"),
     container6: makeNodeComponent("container6"),
     container7: makeNodeComponent("container7"),
     container8: makeNodeComponent("container8"),
