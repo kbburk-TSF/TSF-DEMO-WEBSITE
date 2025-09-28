@@ -1,11 +1,11 @@
 // pages/plasmic-host.jsx
 import * as React from "react";
 import { PlasmicCanvasHost, registerComponent } from "@plasmicapp/react-web/lib/host";
-import TwoChartEngine from "../components/TwoChartEngine.jsx";
+import TwoChartsPlasmic from "../components/TwoChartsPlasmic.jsx";
 
-registerComponent(TwoChartEngine, {
-  name: "TwoChartEngine",
-  importPath: "./components/TwoChartEngine",
+registerComponent(TwoChartsPlasmic, {
+  name: "TwoChartsPlasmic",
+  importPath: "./components/TwoChartsPlasmic",
   isDefaultExport: true,
   props: {},
 });
