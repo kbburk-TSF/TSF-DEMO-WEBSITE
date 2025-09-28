@@ -23,7 +23,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: tapQSmgujw7smcBwiTayug/projectcss
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: _as8O7FbI-4s/css
-import TsfLogoHorizontalSvgIcon from "./icons/PlasmicIcon__TsfLogoHorizontalSvg"; // plasmic-import: UFoKPuFYFNSa/icon
+import TsfLogoHorizontalWhiteSvgIcon from "./icons/PlasmicIcon__TsfLogoHorizontalWhiteSvg"; // plasmic-import: ueZRFirmKqbo/icon
 
 createPlasmicElementProxy;
 
@@ -88,7 +88,7 @@ function PlasmicFooter__RenderFunc(props) {
         >
           <div className={classNames(projectcss.all, sty.columns__wIt0X)}>
             <div className={classNames(projectcss.all, sty.column__sGamY)}>
-              <TsfLogoHorizontalSvgIcon
+              <TsfLogoHorizontalWhiteSvgIcon
                 data-plasmic-name={"svg"}
                 data-plasmic-override={overrides.svg}
                 className={classNames(projectcss.all, sty.svg)}

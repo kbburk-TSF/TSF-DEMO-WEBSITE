@@ -158,9 +158,10 @@ function PlasmicHomepage__RenderFunc(props) {
                         }
                       </div>
                       <Button
-                        data-plasmic-name={"button"}
-                        data-plasmic-override={overrides.button}
-                        className={classNames("__wab_instance", sty.button)}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__u8N7I
+                        )}
                         color={"neutral"}
                         label={
                           <div
@@ -237,11 +238,7 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.features}
             className={classNames(projectcss.all, sty.features)}
           >
-            <div
-              data-plasmic-name={"column"}
-              data-plasmic-override={overrides.column}
-              className={classNames(projectcss.all, sty.column)}
-            >
+            <div className={classNames(projectcss.all, sty.column__pCy12)}>
               <h1
                 className={classNames(
                   projectcss.all,
@@ -369,6 +366,156 @@ function PlasmicHomepage__RenderFunc(props) {
                   aspectRatio: undefined
                 }}
               />
+
+              <div
+                data-plasmic-name={"columns"}
+                data-plasmic-override={overrides.columns}
+                className={classNames(projectcss.all, sty.columns)}
+              >
+                <div className={classNames(projectcss.all, sty.column__u14FS)}>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1__vhygh
+                    )}
+                  >
+                    {"Try it yourself."}
+                  </h1>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__uyPE
+                    )}
+                  >
+                    {
+                      "Explore live demos with car crash data, air quality measures, and even stock market forecasts. See how the Gold Line and Green Zone adapt in real time."
+                    }
+                  </div>
+                  <Button
+                    className={classNames("__wab_instance", sty.button__hiv9D)}
+                    color={"muted"}
+                    label={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__zbCrk
+                        )}
+                      >
+                        {"TSF Engine Demo"}
+                      </div>
+                    }
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["goToTsfEngineDemo"] = true
+                        ? (() => {
+                            const actionArgs = { destination: `/engine` };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToTsfEngineDemo"] != null &&
+                        typeof $steps["goToTsfEngineDemo"] === "object" &&
+                        typeof $steps["goToTsfEngineDemo"].then === "function"
+                      ) {
+                        $steps["goToTsfEngineDemo"] = await $steps[
+                          "goToTsfEngineDemo"
+                        ];
+                      }
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__b18Ra)}>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1__jle2
+                    )}
+                  >
+                    {"Check out the science. "}
+                  </h1>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__iwrBh
+                    )}
+                  >
+                    {
+                      "The Model of Temporal Inertia redefines how we forecast change over time \u2014 and challenges how human beings perceive time. "
+                    }
+                  </div>
+                  <Button
+                    className={classNames("__wab_instance", sty.button__dKfEt)}
+                    color={"muted"}
+                    label={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qB6S
+                        )}
+                      >
+                        {"The Model of Temporal Inertia"}
+                      </div>
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__nnBu)}>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1___6Bsgi
+                    )}
+                  >
+                    {"Be a part of TSF."}
+                  </h1>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__cwaZ
+                    )}
+                  >
+                    {
+                      "Our first application: SKU-level monthly forecasts for Shopify merchants. We\u2019re now seeking seed investors to bring this breakthrough to market."
+                    }
+                  </div>
+                  <Button
+                    className={classNames("__wab_instance", sty.button___0EnWk)}
+                    color={"muted"}
+                    label={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cwRjF
+                        )}
+                      >
+                        {"Investment Opportunity"}
+                      </div>
+                    }
+                  />
+                </div>
+              </div>
             </div>
           </section>
           <BlogPosts
@@ -424,9 +571,8 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
-    "button",
     "features",
-    "column",
+    "columns",
     "blogPosts",
     "ctaBlock",
     "heroSection",
@@ -435,9 +581,8 @@ const PlasmicDescendants = {
   ],
 
   header: ["header"],
-  button: ["button"],
-  features: ["features", "column"],
-  column: ["column"],
+  features: ["features", "columns"],
+  columns: ["columns"],
   blogPosts: ["blogPosts"],
   ctaBlock: ["ctaBlock"],
   heroSection: ["heroSection"],
@@ -478,9 +623,8 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    button: makeNodeComponent("button"),
     features: makeNodeComponent("features"),
-    column: makeNodeComponent("column"),
+    columns: makeNodeComponent("columns"),
     blogPosts: makeNodeComponent("blogPosts"),
     ctaBlock: makeNodeComponent("ctaBlock"),
     heroSection: makeNodeComponent("heroSection"),

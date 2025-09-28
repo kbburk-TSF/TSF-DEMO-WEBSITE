@@ -865,6 +865,11 @@
           "id": "UFoKPuFYFNSa",
           "name": "TsfLogoHorizontalSvgIcon",
           "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__TsfLogoHorizontalSvg.jsx"
+        },
+        {
+          "id": "ueZRFirmKqbo",
+          "name": "TsfLogoHorizontalWhiteSvgIcon",
+          "moduleFilePath": "plasmic/tsf_demo_website/icons/PlasmicIcon__TsfLogoHorizontalWhiteSvg.jsx"
         }
       ],
       "images": [

@@ -110,7 +110,7 @@
   font-size: var(--token-4gJnguW2Fn8h);
   min-width: 0;
 }
-.button:global(.__wab_instance):global(.__wab_instance) {
+.button__u8N7I:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
 }
 .svg__v7Ln9 {
@@ -173,7 +173,7 @@
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
-.column {
+.column__pCy12 {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -254,6 +254,185 @@
 }
 .img__fgL0F > picture > img {
   object-fit: cover;
+}
+.columns {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  align-items: stretch;
+  flex-shrink: 1;
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-width: 0;
+  --plsmc-rc-col-gap: 0px;
+  padding: 8px;
+}
+.columns > :nth-child(3n + 1) {
+  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
+}
+.columns > :nth-child(3n + 2) {
+  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
+}
+.columns > :nth-child(3n + 3) {
+  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .columns {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 0;
+    --plsmc-rc-col-gap: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .columns > :nth-child(1n + 1) {
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  }
+}
+.column__u14FS {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--token-uA4cGu2jVLb7);
+  min-width: 0;
+  padding: 8px 20px;
+}
+.h1__vhygh {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 40px;
+  margin-bottom: 23px;
+  min-width: 0;
+}
+.text__uyPE {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+  color: var(--token-559-Sfg5QY95);
+  font-weight: 700;
+  min-width: 0;
+}
+.button__hiv9D:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg___0HYa2 {
+  position: relative;
+  height: 1em;
+}
+.text__zbCrk {
+  white-space: pre;
+  color: var(--token-559-Sfg5QY95);
+  font-weight: 700;
+}
+.svg__hKv1W {
+  position: relative;
+  height: 1em;
+}
+.column__b18Ra {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--token-RY61_P1n2_lE);
+  min-width: 0;
+  padding: 8px 20px;
+}
+.h1__jle2 {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 40px;
+  padding-bottom: 25px;
+  min-width: 0;
+}
+.text__iwrBh {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+  color: var(--token-559-Sfg5QY95);
+  font-weight: 700;
+  min-width: 0;
+}
+.button__dKfEt:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__dJqhS {
+  position: relative;
+  height: 1em;
+}
+.text__qB6S {
+  white-space: pre;
+  color: var(--token-559-Sfg5QY95);
+  font-weight: 700;
+}
+.svg__jqvdW {
+  position: relative;
+  height: 1em;
+}
+.column__nnBu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--token-ln6BikL9OX2f);
+  min-width: 0;
+  padding: 8px 20px;
+}
+.h1___6Bsgi {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 40px;
+  margin-bottom: 25px;
+  min-width: 0;
+}
+.text__cwaZ {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+  color: var(--token-559-Sfg5QY95);
+  font-weight: 700;
+  min-width: 0;
+}
+.button___0EnWk:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__jzd1G {
+  position: relative;
+  height: 1em;
+}
+.text__cwRjF {
+  white-space: pre;
+  color: var(--token-559-Sfg5QY95);
+  font-weight: 700;
+}
+.svg__aZC {
+  position: relative;
+  height: 1em;
 }
 .blogPosts:global(.__wab_instance) {
   position: relative;
