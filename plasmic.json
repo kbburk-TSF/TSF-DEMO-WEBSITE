@@ -1310,6 +1310,11 @@
           "id": "AbT4f2jx31Ts",
           "name": "MI_Crash.png",
           "filePath": "../public/plasmic/tsf_demo_website/images/miCrashPng.png"
+        },
+        {
+          "id": "Sso4j_iJPSch",
+          "name": "SeasonalForecasts-3DPlot-ALL.jpg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/seasonalForecasts3DPlotAllJpg.jpg"
         }
       ],
       "indirect": false,

@@ -135,12 +135,13 @@
   width: 100%;
   height: auto;
   margin-right: -373px;
-  left: 187px;
-  top: 98px;
+  left: 39px;
+  top: -47px;
   z-index: 111;
   row-gap: 16px;
+  margin-bottom: 160px;
   min-width: 0;
-  padding: 30px;
+  padding: 30px 30px 197px;
   border-left: 8px solid var(--token-k65yVdjmN57K);
 }
 @media (min-width: 0px) and (max-width: 767px) {

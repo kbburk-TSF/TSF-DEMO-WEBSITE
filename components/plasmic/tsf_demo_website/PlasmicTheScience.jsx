@@ -127,7 +127,7 @@ function PlasmicTheScience__RenderFunc(props) {
                           sty.h1
                         )}
                       >
-                        {"Terms of Service"}
+                        {"The Model of Temporal Inertia"}
                       </h1>
                       <div
                         className={classNames(
@@ -174,9 +174,9 @@ function PlasmicTheScience__RenderFunc(props) {
                               aspectRatio: undefined
                             }
                           : {
-                              src: "/plasmic/tsf_demo_website/images/greenChameleonS9Cc2SKySjmUnsplashJpg.jpg",
-                              fullWidth: 1920,
-                              fullHeight: 1280,
+                              src: "/plasmic/tsf_demo_website/images/seasonalForecasts3DPlotAllJpg.jpg",
+                              fullWidth: 2250,
+                              fullHeight: 1656,
                               aspectRatio: undefined
                             }
                       }

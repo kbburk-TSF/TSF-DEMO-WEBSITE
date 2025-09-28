@@ -127,7 +127,7 @@ function PlasmicInvestmentOpportunity__RenderFunc(props) {
                           sty.h1
                         )}
                       >
-                        {"Terms of Service"}
+                        {"Investment Opportunity"}
                       </h1>
                       <div
                         className={classNames(
