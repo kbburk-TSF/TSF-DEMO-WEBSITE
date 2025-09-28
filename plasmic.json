@@ -1247,6 +1247,31 @@
           "id": "t0QjLMFrKRNw",
           "name": "TSFLogoStacked.svg",
           "filePath": "../public/plasmic/tsf_demo_website/images/tsfLogoStackedSvg.svg"
+        },
+        {
+          "id": "-NN0yQBlOYT4",
+          "name": "ClassicalForecasts.svg",
+          "filePath": "../public/plasmic/tsf_demo_website/images/classicalForecastsSvg.svg"
+        },
+        {
+          "id": "cmE8KHqu6VsI",
+          "name": "ClassicalForecasts.png",
+          "filePath": "../public/plasmic/tsf_demo_website/images/classicalForecastsPng.png"
+        },
+        {
+          "id": "SCT2nHI4bWDS",
+          "name": "Targeted-GreenGold.png",
+          "filePath": "../public/plasmic/tsf_demo_website/images/targetedGreenGoldPng.png"
+        },
+        {
+          "id": "kzdgWgoVSZgD",
+          "name": "Targeted-GreenGold.png 2",
+          "filePath": "../public/plasmic/tsf_demo_website/images/targetedGreenGoldPng2.png"
+        },
+        {
+          "id": "2lonpvWn3EiV",
+          "name": "Targeted-Gold.png",
+          "filePath": "../public/plasmic/tsf_demo_website/images/targetedGoldPng.png"
         }
       ],
       "indirect": false,

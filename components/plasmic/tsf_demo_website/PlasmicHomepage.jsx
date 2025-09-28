@@ -24,7 +24,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Header from "../../Header"; // plasmic-import: 0XA8z88jHqGh/component
 import Button from "../../Button"; // plasmic-import: BmK5KSjeUCoq/component
-import Testimonial from "../../Testimonial"; // plasmic-import: e318ljy9CoY1/component
 import BlogPosts from "../../BlogPosts"; // plasmic-import: MiL8App_emDg/component
 import CtaBlock from "../../CtaBlock"; // plasmic-import: XWoJFMRAhX-a/component
 import HeroSection from "../../HeroSection"; // plasmic-import: asQL227ll1f6/component
@@ -35,7 +34,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: tapQSmgujw7smcBwiTayug/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: jTXG3Regz125/css
-import ArrowRightSvgIcon from "./icons/PlasmicIcon__ArrowRightSvg"; // plasmic-import: ZAqybCfm4jTf/icon
 
 createPlasmicElementProxy;
 
@@ -137,13 +135,11 @@ function PlasmicHomepage__RenderFunc(props) {
                       )}
                     >
                       <h1
-                        data-plasmic-name={"h1"}
-                        data-plasmic-override={overrides.h1}
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
                           projectcss.__wab_text,
-                          sty.h1
+                          sty.h1__cqPT
                         )}
                       >
                         {hasVariant(globalVariants, "screen", "mobileOnly")
@@ -162,10 +158,9 @@ function PlasmicHomepage__RenderFunc(props) {
                         }
                       </div>
                       <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__u8N7I
-                        )}
+                        data-plasmic-name={"button"}
+                        data-plasmic-override={overrides.button}
+                        className={classNames("__wab_instance", sty.button)}
                         color={"neutral"}
                         label={
                           <div
@@ -242,517 +237,138 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.features}
             className={classNames(projectcss.all, sty.features)}
           >
-            <div className={classNames(projectcss.all, sty.column__pCy12)}>
-              <h2
+            <div
+              data-plasmic-name={"column"}
+              data-plasmic-override={overrides.column}
+              className={classNames(projectcss.all, sty.column)}
+            >
+              <h1
                 className={classNames(
                   projectcss.all,
-                  projectcss.h2,
+                  projectcss.h1,
                   projectcss.__wab_text,
-                  sty.h2__eevss
+                  sty.h1__eevss
                 )}
               >
-                {"Value propositions headline."}
-              </h2>
+                {"Targeted Seasonal Forecasts vs. \nTraditional Forecasts"}
+              </h1>
               <div
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__szmzL
-                )}
-              >
-                {
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. \nLorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                }
-              </div>
-              <div
-                data-plasmic-name={"container4"}
-                data-plasmic-override={overrides.container4}
-                className={classNames(projectcss.all, sty.container4)}
-              >
-                <div
-                  data-plasmic-name={"outerRow2"}
-                  data-plasmic-override={overrides.outerRow2}
-                  className={classNames(projectcss.all, sty.outerRow2)}
-                >
-                  <div
-                    data-plasmic-name={"row2"}
-                    data-plasmic-override={overrides.row2}
-                    className={classNames(projectcss.all, sty.row2)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column__osCM)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__zc2Oi
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__zGgkp
-                          )}
-                        />
-
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__yKMiE
-                          )}
-                        >
-                          {"Some value proposition of your service."}
-                        </h3>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__gk93Q
-                          )}
-                        >
-                          {
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                          }
-                        </div>
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__vqkK
-                          )}
-                          end={
-                            <ArrowRightSvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__pFkqU
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          iconEnd={true}
-                          label={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__sKNy
-                              )}
-                            >
-                              {"Learn more"}
-                            </div>
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__zrlbN)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___2FbO
-                        )}
-                      >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__yvXic)}
-                          displayHeight={"400px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"none"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"400px"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/tsf_demo_website/images/corinneKutzTMi2R5NfoUnsplashJpg.jpg",
-                            fullWidth: 1920,
-                            fullHeight: 1280,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"container5"}
-                data-plasmic-override={overrides.container5}
-                className={classNames(projectcss.all, sty.container5)}
-              >
-                <div
-                  data-plasmic-name={"outerRow3"}
-                  data-plasmic-override={overrides.outerRow3}
-                  className={classNames(projectcss.all, sty.outerRow3)}
-                >
-                  <div
-                    data-plasmic-name={"row4"}
-                    data-plasmic-override={overrides.row4}
-                    className={classNames(projectcss.all, sty.row4)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column__spWft)}
-                    >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__rNgsa)}
-                        displayHeight={"400px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"none"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"400px"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/tsf_demo_website/images/tiffanyTertipesNxcs8Wwj9J0UnsplashJpg.jpg",
-                          fullWidth: 1920,
-                          fullHeight: 1280,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__m4DEe)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__xc7Qj
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__fq4RS
-                          )}
-                        />
-
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__hlxkm
-                          )}
-                        >
-                          {"Some value proposition of your service."}
-                        </h3>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__nw0Bm
-                          )}
-                        >
-                          {
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                          }
-                        </div>
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__fgEbw
-                          )}
-                          end={
-                            <ArrowRightSvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__eEtGz
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          iconEnd={true}
-                          label={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__xuPzO
-                              )}
-                            >
-                              {"Learn more"}
-                            </div>
-                          }
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"container6"}
-                data-plasmic-override={overrides.container6}
-                className={classNames(projectcss.all, sty.container6)}
-              >
-                <div
-                  data-plasmic-name={"outerRow4"}
-                  data-plasmic-override={overrides.outerRow4}
-                  className={classNames(projectcss.all, sty.outerRow4)}
-                >
-                  <div
-                    data-plasmic-name={"row3"}
-                    data-plasmic-override={overrides.row3}
-                    className={classNames(projectcss.all, sty.row3)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column__ug0Ub)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__tWZmz
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__uzokv
-                          )}
-                        />
-
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__j0Ei
-                          )}
-                        >
-                          {"Some value proposition of your service."}
-                        </h3>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__fuLiv
-                          )}
-                        >
-                          {
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                          }
-                        </div>
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__ncIp
-                          )}
-                          end={
-                            <ArrowRightSvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__rs9Ia
-                              )}
-                              role={"img"}
-                            />
-                          }
-                          iconEnd={true}
-                          label={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__phvym
-                              )}
-                            >
-                              {"Learn more"}
-                            </div>
-                          }
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column___1BApW)}
-                    >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__jDsse)}
-                        displayHeight={"400px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"none"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"400px"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/tsf_demo_website/images/xpsOcAuPlfZxEcUnsplashJpg.jpg",
-                          fullWidth: 640,
-                          fullHeight: 360,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            data-plasmic-name={"testimonials"}
-            data-plasmic-override={overrides.testimonials}
-            className={classNames(projectcss.all, sty.testimonials)}
-          >
-            <div className={classNames(projectcss.all, sty.column___8N2FP)}>
-              <h2
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h2,
-                  projectcss.__wab_text,
-                  sty.h2__iSMM
-                )}
-              >
-                {"Testimonials"}
-              </h2>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ed33S
+                  sty.text__eDZtq
                 )}
               >
                 {
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. \nLorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                  "Traditional models like ARIMA, SES, HWES, Prophet, and other ML approaches produce one number per date \u2014 with no guarantee of reliability. Targeted Seasonal Forecasts test thousands of models against history to choose the most accurate forecast, date by date.\n\n\r\nHere\u2019s what a classical forecast looks like when forecasting daily car crashes in California for the month of October, 2016. The actual crashes for October 2016 are shown for comparison as the dotted line. "
                 }
               </div>
-              <div className={classNames(projectcss.all, sty.columns__ebeaz)}>
-                <div className={classNames(projectcss.all, sty.column__ea40)}>
-                  <Testimonial
-                    data-plasmic-name={"testimonial"}
-                    data-plasmic-override={overrides.testimonial}
-                    className={classNames("__wab_instance", sty.testimonial)}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__kg1CK)}>
-                  <div
-                    className={classNames(projectcss.all, sty.columns__oooIm)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column__ru59U)}
-                    >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__vx06Q)}
-                        displayHeight={"auto"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"auto"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/tsf_demo_website/images/mePng.png",
-                          fullWidth: 140,
-                          fullHeight: 140,
-                          aspectRatio: undefined
-                        }}
-                      />
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__fo6Yc)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/classicalForecastsPng.png",
+                  fullWidth: 1200,
+                  fullHeight: 481,
+                  aspectRatio: undefined
+                }}
+              />
 
-                      <h5
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h5,
-                          projectcss.__wab_text,
-                          sty.h5__asUcZ
-                        )}
-                      >
-                        {"Zulia Maron Duo"}
-                      </h5>
-                      <div
-                        before={""}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dwGgd
-                        )}
-                      >
-                        {
-                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                        }
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.column__bmFAy)}>
-                  <div
-                    className={classNames(projectcss.all, sty.columns__dUloT)}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__vrhW3
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{"Here's the "}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.column__vWvqn)}
-                    >
-                      <h2
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h2,
-                          projectcss.__wab_text,
-                          sty.h2__d6RLe
-                        )}
-                      >
-                        {"\u201c"}
-                      </h2>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__kIr2M
-                        )}
-                      >
-                        {
-                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                        }
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.columns__oyRqH
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.column__eQgJr
-                          )}
-                        >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__yNulp)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/tsf_demo_website/images/thumbAvatar1583758683Jpg.jpg",
-                              fullWidth: 160,
-                              fullHeight: 160,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.column__vbBy
-                          )}
-                        >
-                          <h5
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h5,
-                              projectcss.__wab_text,
-                              sty.h5__lf3Jy
-                            )}
-                          >
-                            {"Lorem Ipsum"}
-                          </h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    {"Targeted Seasonal Forecast "}
+                  </span>
+                  <React.Fragment>
+                    {
+                      "for the same data. Because each forecast value for each date is forecast independently, the Targeted Seasonal Forecast is able to anticipate changes within the forecast period. And because the forecast value of each date is selected based on objective historical patterns of accuracy of more than 2,500 forecast models, you can be confident in the forecast values. "
+                    }
+                  </React.Fragment>
+                </React.Fragment>
               </div>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__lZzI)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/targetedGoldPng.png",
+                  fullWidth: 1200,
+                  fullHeight: 481,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__qs6D
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{"The "}</React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"Gold Line"}
+                  </span>
+                  <React.Fragment>
+                    {" is the bulls-eye forecast. The "}
+                  </React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"Green Zone"}
+                  </span>
+                  <React.Fragment>
+                    {
+                      " is your target range \u2014 an accuracy band built from real historical performance. Together, they give you clarity: where the future is most likely to land."
+                    }
+                  </React.Fragment>
+                </React.Fragment>
+              </div>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__fgL0F)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tsf_demo_website/images/targetedGreenGoldPng2.png",
+                  fullWidth: 1200,
+                  fullHeight: 481,
+                  aspectRatio: undefined
+                }}
+              />
             </div>
           </section>
           <BlogPosts
@@ -808,19 +424,9 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
-    "h1",
+    "button",
     "features",
-    "container4",
-    "outerRow2",
-    "row2",
-    "container5",
-    "outerRow3",
-    "row4",
-    "container6",
-    "outerRow4",
-    "row3",
-    "testimonials",
-    "testimonial",
+    "column",
     "blogPosts",
     "ctaBlock",
     "heroSection",
@@ -829,31 +435,9 @@ const PlasmicDescendants = {
   ],
 
   header: ["header"],
-  h1: ["h1"],
-  features: [
-    "features",
-    "container4",
-    "outerRow2",
-    "row2",
-    "container5",
-    "outerRow3",
-    "row4",
-    "container6",
-    "outerRow4",
-    "row3"
-  ],
-
-  container4: ["container4", "outerRow2", "row2"],
-  outerRow2: ["outerRow2", "row2"],
-  row2: ["row2"],
-  container5: ["container5", "outerRow3", "row4"],
-  outerRow3: ["outerRow3", "row4"],
-  row4: ["row4"],
-  container6: ["container6", "outerRow4", "row3"],
-  outerRow4: ["outerRow4", "row3"],
-  row3: ["row3"],
-  testimonials: ["testimonials", "testimonial"],
-  testimonial: ["testimonial"],
+  button: ["button"],
+  features: ["features", "column"],
+  column: ["column"],
   blogPosts: ["blogPosts"],
   ctaBlock: ["ctaBlock"],
   heroSection: ["heroSection"],
@@ -894,19 +478,9 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    h1: makeNodeComponent("h1"),
+    button: makeNodeComponent("button"),
     features: makeNodeComponent("features"),
-    container4: makeNodeComponent("container4"),
-    outerRow2: makeNodeComponent("outerRow2"),
-    row2: makeNodeComponent("row2"),
-    container5: makeNodeComponent("container5"),
-    outerRow3: makeNodeComponent("outerRow3"),
-    row4: makeNodeComponent("row4"),
-    container6: makeNodeComponent("container6"),
-    outerRow4: makeNodeComponent("outerRow4"),
-    row3: makeNodeComponent("row3"),
-    testimonials: makeNodeComponent("testimonials"),
-    testimonial: makeNodeComponent("testimonial"),
+    column: makeNodeComponent("column"),
     blogPosts: makeNodeComponent("blogPosts"),
     ctaBlock: makeNodeComponent("ctaBlock"),
     heroSection: makeNodeComponent("heroSection"),

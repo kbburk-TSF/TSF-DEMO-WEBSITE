@@ -23,7 +23,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: tapQSmgujw7smcBwiTayug/projectcss
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: _as8O7FbI-4s/css
-import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: CTrKh01FN7bB/icon
+import TsfLogoHorizontalSvgIcon from "./icons/PlasmicIcon__TsfLogoHorizontalSvg"; // plasmic-import: UFoKPuFYFNSa/icon
 
 createPlasmicElementProxy;
 
@@ -88,7 +88,7 @@ function PlasmicFooter__RenderFunc(props) {
         >
           <div className={classNames(projectcss.all, sty.columns__wIt0X)}>
             <div className={classNames(projectcss.all, sty.column__sGamY)}>
-              <Icon2Icon
+              <TsfLogoHorizontalSvgIcon
                 data-plasmic-name={"svg"}
                 data-plasmic-override={overrides.svg}
                 className={classNames(projectcss.all, sty.svg)}
@@ -103,7 +103,7 @@ function PlasmicFooter__RenderFunc(props) {
                 )}
               >
                 {
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                  "Targeted Seasonal Forecasts. Accuracy Made Simple. Confidence Made Certain. "
                 }
               </div>
             </div>
@@ -334,30 +334,7 @@ function PlasmicFooter__RenderFunc(props) {
               sty.text__kiPuO
             )}
           >
-            <React.Fragment>
-              <React.Fragment>
-                {
-                  "\u00a9 Company Name. All rights reserved. This site proudly built with "
-                }
-              </React.Fragment>
-              {
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    projectcss.plasmic_default__inline,
-                    sty.link__ybG3K
-                  )}
-                  component={Link}
-                  href={"https://www.plasmic.app/"}
-                  platform={"nextjs"}
-                >
-                  {"Plasmic"}
-                </PlasmicLink__>
-              }
-              <React.Fragment>{"."}</React.Fragment>
-            </React.Fragment>
+            {"\u00a9 TSF. All rights reserved. "}
           </div>
         </div>
       </div>

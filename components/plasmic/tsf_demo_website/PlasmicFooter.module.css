@@ -6,7 +6,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token-c8ePuztBnleH);
+  background: var(--token-uA4cGu2jVLb7);
   position: relative;
   min-width: 0;
   padding: 0px;
@@ -189,7 +189,6 @@
   margin: 0px 0px 0.75em;
 }
 .column__iah10 {
-  display: flex;
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -200,6 +199,7 @@
   border-left-style: solid;
   border-left-color: var(--token-KnDPhbe3-mzb);
   min-width: 0;
+  display: none;
   padding: 0px 8px 0px 0px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
