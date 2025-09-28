@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Poppins%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Montserrat%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Poppins%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&family=Montserrat%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&display=swap");
 
 .plasmic_tokens {
   --token-w1wM14nEuxq0: 0.83rem;
@@ -161,7 +161,7 @@
   --plasmic-token-basic-container-background-dark: var(--token-Fhe2FPJh-kgG);
   --token-RY61_P1n2_lE: #f49425;
   --plasmic-token-tsf-mid: var(--token-RY61_P1n2_lE);
-  --token-uA4cGu2jVLb7: #c97224;
+  --token-uA4cGu2jVLb7: #820a02;
   --plasmic-token-tsf-orange: var(--token-uA4cGu2jVLb7);
   --token-ln6BikL9OX2f: #fcb02c;
   --plasmic-token-tsf-gold: var(--token-ln6BikL9OX2f);
