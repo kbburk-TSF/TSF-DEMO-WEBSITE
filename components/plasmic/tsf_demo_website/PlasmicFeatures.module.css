@@ -201,23 +201,21 @@
   min-width: 0;
   padding: 8px;
 }
-.demoEngineBox {
+.freeBox__fIXtp {
   display: block;
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
-  flex-grow: 0;
   min-width: 0;
-  padding: 8px 18px;
-  border: var(--token-zkXtSfA4MdeU) solid #b80202;
+  padding: 8px;
 }
-.twoChartEngine:global(.__wab_instance) {
+.iframeEmbed:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: absolute;
-  left: 687px;
-  top: 24.671875px;
+  left: 594px;
+  top: 25.671875px;
 }
 .section {
   display: flex;

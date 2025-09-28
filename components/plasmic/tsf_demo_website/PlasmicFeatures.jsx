@@ -20,7 +20,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Header from "../../Header"; // plasmic-import: 0XA8z88jHqGh/component
-import TwoChartEngine from "../../TwoChartEngine"; // plasmic-import: gsNtXq0N7YLw/codeComponent
+import IframeEmbed from "../../IframeEmbed"; // plasmic-import: 6fs-JgtT6su6/codeComponent
 import Button from "../../Button"; // plasmic-import: BmK5KSjeUCoq/component
 import HeroSection from "../../HeroSection"; // plasmic-import: asQL227ll1f6/component
 import Footer from "../../Footer"; // plasmic-import: _as8O7FbI-4s/component
@@ -179,15 +179,16 @@ function PlasmicFeatures__RenderFunc(props) {
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.freeBox__yAyR)}>
-            <div
-              data-plasmic-name={"demoEngineBox"}
-              data-plasmic-override={overrides.demoEngineBox}
-              className={classNames(projectcss.all, sty.demoEngineBox)}
-            >
-              <TwoChartEngine
-                data-plasmic-name={"twoChartEngine"}
-                data-plasmic-override={overrides.twoChartEngine}
-                className={classNames("__wab_instance", sty.twoChartEngine)}
+            <div className={classNames(projectcss.all, sty.freeBox__fIXtp)}>
+              <IframeEmbed
+                data-plasmic-name={"iframeEmbed"}
+                data-plasmic-override={overrides.iframeEmbed}
+                allowFullscreen={true}
+                className={classNames("__wab_instance", sty.iframeEmbed)}
+                loading={"eager"}
+                minHeight={1200}
+                referrerPolicy={"no-referrer"}
+                src={"https://dev.tsfdemo.com/?tab=twocharts"}
               />
             </div>
             <section
@@ -457,8 +458,7 @@ const PlasmicDescendants = {
     "pageBanner",
     "columns",
     "h1",
-    "demoEngineBox",
-    "twoChartEngine",
+    "iframeEmbed",
     "section",
     "foreground",
     "copy",
@@ -472,8 +472,7 @@ const PlasmicDescendants = {
   pageBanner: ["pageBanner", "columns", "h1"],
   columns: ["columns", "h1"],
   h1: ["h1"],
-  demoEngineBox: ["demoEngineBox", "twoChartEngine"],
-  twoChartEngine: ["twoChartEngine"],
+  iframeEmbed: ["iframeEmbed"],
   section: ["section", "foreground"],
   foreground: ["foreground"],
   copy: ["copy", "button"],
@@ -519,8 +518,7 @@ export const PlasmicFeatures = Object.assign(
     pageBanner: makeNodeComponent("pageBanner"),
     columns: makeNodeComponent("columns"),
     h1: makeNodeComponent("h1"),
-    demoEngineBox: makeNodeComponent("demoEngineBox"),
-    twoChartEngine: makeNodeComponent("twoChartEngine"),
+    iframeEmbed: makeNodeComponent("iframeEmbed"),
     section: makeNodeComponent("section"),
     foreground: makeNodeComponent("foreground"),
     copy: makeNodeComponent("copy"),
