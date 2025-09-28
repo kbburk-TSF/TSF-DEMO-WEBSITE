@@ -1,28 +1,20 @@
 // api.js
-// Matches backend/routes/views.py exactly:
-//   GET  /views/ids      -> listForecastIds()
-//   POST /views/query    -> queryView()
-//
-// Uses NEXT_PUBLIC_API_BASE if present; else same-origin.
-// No other behavior changed.
-
+// Exact backend contract:
+//   GET  /views/ids
+//   POST /views/query
 const API_BASE = (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_API_BASE) ? String(process.env.NEXT_PUBLIC_API_BASE) : "";
 
 function joinUrl(base, path) {
   if (!base) return path;
   return base.replace(/\/+$/,"") + "/" + String(path || "").replace(/^\/+/, "");
 }
-
 function baseOrigin() {
   return (typeof window !== "undefined" && window.location?.origin) ? window.location.origin : "";
 }
-
 function absUrl(path) {
   const origin = API_BASE || baseOrigin();
   return origin ? joinUrl(origin, path) : String(path || "");
 }
-
-// ---- API ----
 
 // Returns: [{id, name}, ...]
 export async function listForecastIds({ scope = "global", model = "", series = "" } = {}) {

@@ -239,7 +239,6 @@ function GoldAndGreenZoneChart({ rows, yDomain }){
 function ChartSection({ title, children, mt=16 }){
   return (
     <section style={{ marginTop: mt, paddingLeft: 32, paddingRight: 32 }}>
-      <h2 style={{margin:"6px 0 10px"}}>{title}</h2>
       {children}
     </section>
   );
@@ -336,7 +335,9 @@ export default function TwoChartEngine(){
 
   return (
     <div style={{width:"100%"}}>
-            <div className="row" style={{display:"flex", alignItems:"center", gap:12, flexWrap:"nowrap"}}>
+      <h2 style={{marginTop:0}}>Dashboard 2 — Classical + TSF (Green Zone)</h2>
+
+      <div className="row" style={{display:"flex", alignItems:"center", gap:12, flexWrap:"nowrap"\}\}>
         <div>
           <label>Forecast (forecast_name)</label><br/>
           <select className="input" value={forecastId} onChange={e=>setForecastId(e.target.value)}>
