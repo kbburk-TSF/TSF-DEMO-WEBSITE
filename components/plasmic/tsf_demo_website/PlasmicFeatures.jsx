@@ -186,7 +186,7 @@ function PlasmicFeatures__RenderFunc(props) {
                 allowFullscreen={true}
                 className={classNames("__wab_instance", sty.iframeEmbed)}
                 loading={"eager"}
-                minHeight={800}
+                minHeight={1000}
                 referrerPolicy={"no-referrer"}
                 src={"https://dev.tsfdemo.com/?tab=twocharts"}
               />
