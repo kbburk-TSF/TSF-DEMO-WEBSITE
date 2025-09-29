@@ -257,7 +257,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 )}
               >
                 {
-                  "Traditional models like ARIMA, SES, HWES, Prophet, and other ML approaches produce one number per date \u2014 with no guarantee of reliability. Targeted Seasonal Forecasts test thousands of models against history to choose the most accurate forecast, date by date.\n\n\r\nHere\u2019s what a classical forecast looks like when forecasting daily car crashes in California for the month of October, 2016. The actual crashes for October 2016 are shown for comparison as the dotted line. "
+                  "Traditional models like ARIMA, SES, HWES, Prophet, and other ML approaches smooth out volatility, missing critical intra-month and intra-quarter changes. A monthly or quarterly forecast horizon usually resolves to a trend line with no guarantee of reliability. Targeted Seasonal Forecasts test thousands of models against history to choose the most accurate forecast, date by date.\n\n\r\nHere\u2019s what a classical forecast looks like when forecasting daily car crashes in California for the month of October, 2016. The actual crashes for October 2016 are shown for comparison as the dotted line. "
                 }
               </div>
               <PlasmicImg__
