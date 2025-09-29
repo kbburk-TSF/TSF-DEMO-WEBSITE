@@ -16,10 +16,7 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  hasVariant,
-  useDollarState
+  hasVariant
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Header from "../../Header"; // plasmic-import: 0XA8z88jHqGh/component
@@ -28,7 +25,6 @@ import BlogPosts from "../../BlogPosts"; // plasmic-import: MiL8App_emDg/compone
 import CtaBlock from "../../CtaBlock"; // plasmic-import: XWoJFMRAhX-a/component
 import HeroSection from "../../HeroSection"; // plasmic-import: asQL227ll1f6/component
 import Footer from "../../Footer"; // plasmic-import: _as8O7FbI-4s/component
-import Drawer from "../../Drawer"; // plasmic-import: l9ua_tRYWVKP/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: tapQSmgujw7smcBwiTayug/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: tapQSmgujw7smcBwiTayug/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -71,24 +67,6 @@ function PlasmicHomepage__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   const globalVariants = _useGlobalVariants();
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "drawer.isOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
   const styleTokensClassNames = _useStyleTokens();
   return (
     <React.Fragment>
@@ -601,26 +579,6 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
-
-          <Drawer
-            data-plasmic-name={"drawer"}
-            data-plasmic-override={overrides.drawer}
-            className={classNames("__wab_instance", sty.drawer)}
-            isOpen={generateStateValueProp($state, ["drawer", "isOpen"])}
-            onOpenChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, ["drawer", "isOpen"]).apply(
-                null,
-                eventArgs
-              );
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -636,8 +594,7 @@ const PlasmicDescendants = {
     "blogPosts",
     "ctaBlock",
     "heroSection",
-    "footer",
-    "drawer"
+    "footer"
   ],
 
   header: ["header"],
@@ -646,8 +603,7 @@ const PlasmicDescendants = {
   blogPosts: ["blogPosts"],
   ctaBlock: ["ctaBlock"],
   heroSection: ["heroSection"],
-  footer: ["footer"],
-  drawer: ["drawer"]
+  footer: ["footer"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -689,7 +645,6 @@ export const PlasmicHomepage = Object.assign(
     ctaBlock: makeNodeComponent("ctaBlock"),
     heroSection: makeNodeComponent("heroSection"),
     footer: makeNodeComponent("footer"),
-    drawer: makeNodeComponent("drawer"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

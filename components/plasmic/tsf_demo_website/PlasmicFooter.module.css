@@ -111,7 +111,6 @@
   }
 }
 .column__eE66Y {
-  display: flex;
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -123,6 +122,7 @@
   border-left-style: solid;
   border-left-color: var(--token-KnDPhbe3-mzb);
   min-width: 0;
+  display: none;
   padding: 0px 40px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
