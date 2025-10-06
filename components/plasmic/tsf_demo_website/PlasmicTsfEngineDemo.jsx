@@ -20,7 +20,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Header from "../../Header"; // plasmic-import: 0XA8z88jHqGh/component
-import IframeEmbed from "components/IframeEmbed"; // plasmic-import: tntkoQ2-caEu/codeComponent
+import IframeEmbed from "../../IframeEmbed"; // plasmic-import: 6fs-JgtT6su6/codeComponent
 import Button from "../../Button"; // plasmic-import: BmK5KSjeUCoq/component
 import HeroSection from "../../HeroSection"; // plasmic-import: asQL227ll1f6/component
 import Footer from "../../Footer"; // plasmic-import: _as8O7FbI-4s/component
@@ -131,7 +131,7 @@ function PlasmicTsfEngineDemo__RenderFunc(props) {
                     )}
                   >
                     {
-                      "Explore live demos with car crash data, air quality measures, and even stock market forecasts. See how the Gold Line and Green Zone adapt in real time. \n\n\nThe datasets included in this demo are a small sample of the data used in the ongoing research. These forecasts are presented as illustrations only. \n\nThe TSF Engine Demo is being upgraded! Pardon our dust while we implement improvements and add new data sets!\n\r\n\r\n"
+                      "Explore live demos with car crash data, air quality measures, and even stock market forecasts. See how the Gold Line and Green Zone adapt in real time. \n\n\n\nThe datasets included in this demo are a small sample of the data used in the ongoing research. These forecasts are presented as illustrations only. \n\n\r\nThe car crash data was sourced from each individual state, and the Fatality Analysis Reporting System (FARS) data that represents daily totals of fatal highway car crashes on U.S. highways was sourced from the National Highway traffic Safety Administration website. \n\n\r\nThe criteria gasses data was sourced from the Environmental Protection Agency and represents mean observed levels of Carbon Monoxide (CO), Ozone (O3), Nitrogen Dioxide (NO2), or Sulfur Dioxide (SO2) for each state. \n\n\r\nThe stock forecast data is presented to suggest future possibilities of Targeted Seasonal Forecasts. These forecasts are based on 20 years of historical data for Apple Computer (AAPL), Southwest Airlines (LUV), NVIDIA (NDVA), and WalMart (WMT). Keep in mind that a one-month forecast horizon with daily values is not something that currently exists in the world of financial forecasts. \r\n"
                     }
                   </div>
                 </div>
@@ -182,7 +182,7 @@ function PlasmicTsfEngineDemo__RenderFunc(props) {
                 allowFullscreen={true}
                 className={classNames("__wab_instance", sty.iframeEmbed)}
                 loading={"eager"}
-                minHeight={1200}
+                minHeight={1000}
                 referrerPolicy={"no-referrer"}
                 src={"https://dev.tsfdemo.com/?tab=twocharts"}
               />
