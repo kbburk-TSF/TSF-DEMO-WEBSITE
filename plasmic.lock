@@ -45,7 +45,7 @@
         },
         {
           "assetId": "tapQSmgujw7smcBwiTayug",
-          "checksum": "56d77362a5856d3875aaccbe95ad38c2",
+          "checksum": "c3a33f6ab32b58a79b3b4986e987da91",
           "type": "styleTokensProvider"
         },
         {
@@ -91,12 +91,12 @@
         {
           "type": "renderModule",
           "assetId": "MfBfPa4XolcV",
-          "checksum": "cadc1ee6f7bfbffcbfbc357ef0b69f28"
+          "checksum": "63c1fad960a4947847abeea2efc1ee43"
         },
         {
           "type": "cssRules",
           "assetId": "MfBfPa4XolcV",
-          "checksum": "cadc1ee6f7bfbffcbfbc357ef0b69f28"
+          "checksum": "63c1fad960a4947847abeea2efc1ee43"
         },
         {
           "type": "renderModule",
