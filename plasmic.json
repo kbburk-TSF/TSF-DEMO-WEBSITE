@@ -1471,10 +1471,10 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         },
         {
-          "id": "6fs-JgtT6su6",
+          "id": "tntkoQ2-caEu",
           "name": "IframeEmbed",
           "displayName": "IframeEmbed",
-          "componentImportPath": "./components/IframeEmbed"
+          "componentImportPath": "components/IframeEmbed"
         }
       ],
       "customFunctions": []
@@ -1555,6 +1555,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.346",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.346/dist/plasmic.schema.json"
+  "cliVersion": "0.1.347",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.347/dist/plasmic.schema.json"
 }
